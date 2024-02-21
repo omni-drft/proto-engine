@@ -1,3 +1,10 @@
+/* ======================== PURPOSE OF FILE ========================
+* 
+* This file is the header for the HandleInput class. 
+* It contains the class definition and function prototypes. 
+* 
+==================================================================*/
+
 #pragma once
 
 // Library Includes

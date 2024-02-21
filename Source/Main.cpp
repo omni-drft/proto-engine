@@ -1,13 +1,29 @@
+/* ======================== PURPOSE OF FILE ========================
+* 
+* This file is the entry point for the application. 
+*	It creates a window using GLFW and GLEW, 
+* and then enters a loop to render the window.
+* 
+==================================================================*/
+
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 #include <iostream>
+#include <Windows.h>
 
 #include "HandleInput.h"
 
 
 int main()
 {
+	// Close the console window if in release mode
+#ifdef NDEBUG
+	FreeConsole();
+#endif
+
+
 	// Initialise GLFW
 	if (!glfwInit())
 	{
@@ -50,6 +66,9 @@ int main()
 	{
 		// Render here
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		// Set the clear colour
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
 		// Swap front and back buffers
 		glfwSwapBuffers(window);
