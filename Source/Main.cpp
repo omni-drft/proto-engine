@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "HandleInput.h"
+
 
 int main()
 {
@@ -13,8 +15,14 @@ int main()
 		return -1;
 	}
 
+	// Set the OpenGL properties
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+
 	// Create a windowed mode window and its OpenGL context
-	GLFWwindow* window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
 	if (!window)
 	{
 		std::cerr << "Failed to create window" << std::endl;
@@ -33,6 +41,9 @@ int main()
 		glfwTerminate();
 		return -1;
 	}
+
+	// Initialise the input handler
+	ProtoEngine::HandleInput inputHandler(window);
 
 	// Loop until the user closes the window
 	while (!glfwWindowShouldClose(window))
