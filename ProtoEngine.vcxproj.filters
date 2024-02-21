@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{6C01343A-5864-C3DE-01EA-FB94ED2B8F61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLEW">
+      <UniqueIdentifier>{0A80440F-7696-42A5-BF0D-CEC62B63132D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLEW\include">
+      <UniqueIdentifier>{7D112ED3-E9D3-615D-3284-F0E99E853A3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLEW\include\GL">
+      <UniqueIdentifier>{BFCD0536-AB88-F5E1-5440-6E2C40DA3F72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLFW">
+      <UniqueIdentifier>{2B80440F-9796-42A5-E00D-CEC64C63132D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLFW\include">
+      <UniqueIdentifier>{9EA238D7-0A65-6C61-5315-FBEDBF16453F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLFW\include\GLFW">
+      <UniqueIdentifier>{9DB0F771-89D6-C1D8-721C-47A45EE1E6A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{56EB95D1-428D-C0A7-2B48-D4FB178947F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\GLEW\include\GL\eglew.h">
+      <Filter>Dependencies\GLEW\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\GLEW\include\GL\glew.h">
+      <Filter>Dependencies\GLEW\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\GLEW\include\GL\glxew.h">
+      <Filter>Dependencies\GLEW\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\GLEW\include\GL\wglew.h">
+      <Filter>Dependencies\GLEW\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3.h">
+      <Filter>Dependencies\GLFW\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3native.h">
+      <Filter>Dependencies\GLFW\include\GLFW</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

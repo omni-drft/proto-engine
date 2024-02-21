@@ -11,12 +11,17 @@ project "ProtoEngine"
 
 	files { "**.cpp", "**.h", "**.hpp" }
 
+	libdirs { "Dependencies/GLEW/lib/Release/x64/", "Dependencies/GLFW/lib-vc2022/" }
+	links { "glew32s.lib", "glfw3.lib", "opengl32"}
+
+	includedirs { "Dependencies/GLEW/include", "Dependencies/GLFW/include"}
+
 	filter "configurations:Debug"
-		defines { "DEBUG" }
+		defines { "DEBUG", "GLEW_STATIC" }
 		symbols "On"
 
 	filter "configurations:Release"
-		defines { "NDEBUG" }
+		defines { "NDEBUG", "GLEW_STATIC" }
 		optimize "On"
 
 	filter "platforms:Win64"
