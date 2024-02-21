@@ -37,5 +37,20 @@ namespace ProtoEngine
 		/// Static callback function for handling the cursor position
 		/// </summary>
 		static void CursorPositionCallback(GLFWwindow* window, double xpos, double ypos);
+
+		/// <summary>
+		/// Static callback function for handling mouse button presses
+		/// </summary>
+		static void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+
+		/// <summary>
+		/// Static callback function for handling mouse scrolling
+		/// </summary>
+		static void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
+
+		/// <summary>
+		/// Static callback function for handling character input
+		/// </summary>
+		static void CharacterCallback(GLFWwindow* window, unsigned int codepoint);
 	};
 }
