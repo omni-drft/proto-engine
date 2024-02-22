@@ -100,11 +100,17 @@
     <ClInclude Include="Dependencies\GLEW\include\GL\wglew.h" />
     <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3.h" />
     <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3native.h" />
+    <ClInclude Include="Source\Shader.h" />
     <ClInclude Include="Source\HandleInput.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Shader.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\HandleInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\FragmentShader.glsl" />
+    <None Include="Source\Shaders\VertexShader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

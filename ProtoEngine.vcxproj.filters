@@ -45,10 +45,18 @@
     <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3native.h">
       <Filter>Dependencies\GLFW\include\GLFW</Filter>
     </ClInclude>
+    <ClInclude Include="Source\HandleInput.h" />
+    <ClInclude Include="Source\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\HandleInput.cpp" />
+    <ClCompile Include="Source\Shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\VertexShader.glsl" />
+    <None Include="Source\Shaders\FragmentShader.glsl" />
   </ItemGroup>
 </Project>

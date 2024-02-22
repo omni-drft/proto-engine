@@ -14,6 +14,7 @@
 #include <Windows.h>
 
 #include "HandleInput.h"
+#include "Shader.h"
 
 
 int main()
@@ -60,6 +61,8 @@ int main()
 
 	// Initialise the input handler
 	ProtoEngine::HandleInput inputHandler(window);
+	ProtoEngine::Shader shader("Source/Shaders/vertexShader.glsl", "Source/Shaders/fragmentShader.glsl");
+	shader.Use();
 
 	// Loop until the user closes the window
 	while (!glfwWindowShouldClose(window))
@@ -69,6 +72,9 @@ int main()
 
 		// Set the clear colour
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+
+		// Use the shader
+		shader.Use();
 
 		// Swap front and back buffers
 		glfwSwapBuffers(window);
