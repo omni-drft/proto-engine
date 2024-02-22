@@ -37,7 +37,7 @@ void ProtoEngine::HandleInput::KeyCallback(GLFWwindow* window, int key, int scan
 void ProtoEngine::HandleInput::CursorPositionCallback(GLFWwindow* window, double xpos, double ypos)
 {
 
-#ifdef DEBUG
+#if INPUT_DEBUG
 	// Print the current cursor position whenever the cursor moves
 	std::cout << "X: " << xpos << " Y: " << ypos << std::endl;
 #endif 
@@ -50,7 +50,7 @@ void ProtoEngine::HandleInput::MouseButtonCallback(GLFWwindow* window, int butto
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
 	{
 
-#ifdef DEBUG
+#ifdef INPUT_DEBUG
 		std::cout << "Left mouse button pressed" << std::endl;
 #endif
 
@@ -58,7 +58,7 @@ void ProtoEngine::HandleInput::MouseButtonCallback(GLFWwindow* window, int butto
 	if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
 	{
 
-#ifdef DEBUG
+#ifdef INPUT_DEBUG
 		std::cout << "Right mouse button pressed" << std::endl;
 #endif 
 
@@ -66,7 +66,7 @@ void ProtoEngine::HandleInput::MouseButtonCallback(GLFWwindow* window, int butto
 	if (button == GLFW_MOUSE_BUTTON_MIDDLE && action == GLFW_PRESS)
 	{
 
-#ifdef DEBUG
+#ifdef INPUT_DEBUG
 		std::cout << "Middle mouse button pressed" << std::endl;
 #endif
 
@@ -76,7 +76,7 @@ void ProtoEngine::HandleInput::MouseButtonCallback(GLFWwindow* window, int butto
 void ProtoEngine::HandleInput::ScrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 {
 
-#ifdef DEBUG
+#ifdef INPUT_DEBUG
 	// Print the scroll offset whenever the mouse wheel is scrolled
 	std::cout << "X Offset: " << xoffset << " Y Offset: " << yoffset << std::endl;
 #endif
@@ -86,7 +86,7 @@ void ProtoEngine::HandleInput::ScrollCallback(GLFWwindow* window, double xoffset
 void ProtoEngine::HandleInput::CharacterCallback(GLFWwindow* window, unsigned int codepoint)
 {
 
-#ifdef DEBUG
+#ifdef INPUT_DEBUG
 	// Print the character whenever a key is pressed
 	std::cout << "Character: " << codepoint << std::endl;
 #endif

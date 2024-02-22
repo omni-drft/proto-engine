@@ -1,4 +1,7 @@
-﻿  Main.cpp
+﻿  HandleInput.cpp
+  Main.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
 F:\dev\C++\openGL\ProtoEngine\Dependencies\GLFW\include\GLFW\glfw3.h(123,1): message : see previous definition of 'APIENTRY'
+  Shader.cpp
+  Generating Code...
   ProtoEngine.vcxproj -> F:\dev\C++\openGL\ProtoEngine\Bin\Debug\ProtoEngine.exe
