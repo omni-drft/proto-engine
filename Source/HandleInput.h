@@ -1,7 +1,8 @@
 /* ======================== PURPOSE OF FILE ========================
 * 
 * This file is the header for the HandleInput class. 
-* It contains the class definition and function prototypes. 
+* HandleInput class processes all necessary kinds of input
+* that a user can provide to the application.
 * 
 ==================================================================*/
 

@@ -1,3 +1,9 @@
+/* ============================== FILE PURPOSE ===============================
+* 
+*  This file contains the implementation of the Shader class.
+* 
+=========================================================================== */
+
 #include "Shader.h"
 
 ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
