@@ -30,6 +30,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		#endif // DEBUG
 	}
 
+	// Set the window to full screen
 	glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, 2560, 1600, GLFW_DONT_CARE);
 
 	// Make the window's context current
@@ -46,17 +47,22 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	}
 
 	#ifdef DEBUG
+	// Print the OpenGL version
 	std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
 	#endif
 }
 
 void ProtoEngine::Window::ClearWindow()
 {
+	// Set the background color
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+
+	// Clear the window
 	glClear(GL_COLOR_BUFFER_BIT);
 }
 
 void ProtoEngine::Window::FrameBufferSizeCallback(GLFWwindow* window, int width, int height)
 {
-		glViewport(0, 0, width, height);
+	// Set the viewport to the new window size
+	glViewport(0, 0, width, height);
 }

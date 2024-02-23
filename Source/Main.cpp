@@ -4,7 +4,7 @@
 *	It creates a window using GLFW and GLEW, 
 * and then enters a loop to render the window.
 * 
-================================================================= */
+================================================================== */
 
 // Link OpenGL Extension Wrangler
 #include <GL/glew.h>
