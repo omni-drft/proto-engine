@@ -934,6 +934,7 @@
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\Window.h" />
+    <ClInclude Include="Source\Object.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp">
@@ -949,5 +950,6 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Window.cpp" />
+    <ClCompile Include="Source\Object.cpp" />
   </ItemGroup>
 </Project>
