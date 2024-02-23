@@ -933,6 +933,7 @@
     <ClInclude Include="Source\Shader.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp">
@@ -947,5 +948,6 @@
     <ClCompile Include="Source\Shader.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
 </Project>

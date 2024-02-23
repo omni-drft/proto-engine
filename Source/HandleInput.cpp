@@ -6,23 +6,24 @@
 
 #include "HandleInput.h"
 
-ProtoEngine::HandleInput::HandleInput(GLFWwindow* window)
+ProtoEngine::HandleInput::HandleInput(ProtoEngine::Window window)
 	: inputWindow(window)
 {
+
 	// Set the key callback function
-	glfwSetKeyCallback(inputWindow, KeyCallback);
+	glfwSetKeyCallback(window.GetWindow(), KeyCallback);
 
 	// Set the cursor position callback function
-	glfwSetCursorPosCallback(inputWindow, CursorPositionCallback);
+	glfwSetCursorPosCallback(window.GetWindow(), CursorPositionCallback);
 
 	// Set the mouse button callback function
-	glfwSetMouseButtonCallback(inputWindow, MouseButtonCallback);
+	glfwSetMouseButtonCallback(window.GetWindow(), MouseButtonCallback);
 
 	// Set the scroll callback function
-	glfwSetScrollCallback(inputWindow, ScrollCallback);
+	glfwSetScrollCallback(window.GetWindow(), ScrollCallback);
 
 	// Set the character callback function
-	glfwSetCharCallback(inputWindow, CharacterCallback);
+	glfwSetCharCallback(window.GetWindow(), CharacterCallback);
 }
 
 void ProtoEngine::HandleInput::KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -30,7 +31,7 @@ void ProtoEngine::HandleInput::KeyCallback(GLFWwindow* window, int key, int scan
 	// If the escape key is pressed, close the window
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 	{
-		glfwSetWindowShouldClose(window, GL_TRUE);
+		glfwSetWindowShouldClose(window, GLFW_TRUE);
 	}
 }
 

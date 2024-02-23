@@ -13,6 +13,8 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+#include "Window.h"
+
 /// <summary>
 /// General purpose namespace for the engine
 /// </summary>
@@ -28,13 +30,13 @@ namespace ProtoEngine
 		/// Constructor for the input handler
 		/// </summary>
 		/// <param name="window">- pointer to window that currently takes input</param>
-		HandleInput(GLFWwindow* window);
+		HandleInput(ProtoEngine::Window window);
 
 	private:
 		/// <summary>
 		/// Current window that is taking input
 		/// </summary>
-		GLFWwindow* inputWindow;
+		ProtoEngine::Window inputWindow;
 
 		/// <summary>
 		/// Static callback function for handling all key presses

@@ -4,7 +4,7 @@
 *	It creates a window using GLFW and GLEW, 
 * and then enters a loop to render the window.
 * 
-==================================================================*/
+================================================================= */
 
 // Link OpenGL Extension Wrangler
 #include <GL/glew.h>
@@ -23,63 +23,22 @@
 // Link custom classes
 #include "HandleInput.h"
 #include "Shader.h"
-
-void frameBufferSizeCallback(GLFWwindow* window, int width, int height) {
-	glViewport(0, 0, width, height);
-}
-
+#include "Window.h"
 
 int main()
 {
 	// Close the console window if in release mode
-#ifdef NDEBUG
+	#ifdef NDEBUG
 	FreeConsole();
-#endif
+	#endif // NDEBUG
 
-	// Initialise GLFW
-	if (!glfwInit())
-	{
-		std::cerr << "Failed to initialize GLFW" << std::endl;
-		return -1;
-	}
-
-	// Set the OpenGL properties
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-
-	// Create a windowed mode window and its OpenGL context
-	GLFWwindow* window = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
-	if (!window)
-	{
-#ifdef DEBUG
-		std::cerr << "Failed to create window" << std::endl;
-#endif // DEBUG
-		glfwTerminate();
-		return -1;
-	}
-
-	// Make the window's context current
-	glfwMakeContextCurrent(window);
-	glfwSetFramebufferSizeCallback(window, frameBufferSizeCallback);
-
-	
-	// Initialise GLEW
-	if (glewInit() != GLEW_OK)
-	{
-#ifdef DEBUG
-		std::cerr << "Failed to initialize GLEW" << std::endl;
-#endif // DEBUG
-		glfwTerminate();
-		return -1;
-	}
-#ifdef DEBUG
-	std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
-#endif
+	// Create a window
+	ProtoEngine::Window window(800, 600, "ProtoEngine");
 
 	// Initialise the input handler
 	ProtoEngine::HandleInput inputHandler(window);
+
+	// Create a shader
 	ProtoEngine::Shader shader("Source/Shaders/vertexShader.glsl", "Source/Shaders/fragmentShader.glsl");
 	shader.Use();	
 
@@ -123,21 +82,18 @@ int main()
 	glBindVertexArray(0);
 
 	// Check for OpenGL errors
-#ifdef DEBUG
+	#ifdef DEBUG
 	GLenum error = glGetError();
 	if (error != GL_NO_ERROR) {
 		std::cerr << "OpenGL error: " << error << std::endl;
 	}
-#endif // DEBUG
+	#endif // DEBUG
 
 	// Loop until the user closes the window
-	while (!glfwWindowShouldClose(window))
+	while (!glfwWindowShouldClose(window.GetWindow()))
 	{
-		// Set the clear colour
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		// Render here
-		glClear(GL_COLOR_BUFFER_BIT);
-
+		// Clear the window
+		window.ClearWindow();
 
 		// Use the shader
 		shader.Use();
@@ -152,18 +108,18 @@ int main()
 		glBindVertexArray(0);
 
 		// Swap front and back buffers
-		glfwSwapBuffers(window);
+		window.SwapBuffers();
 
 		// Poll for and process events
-		glfwPollEvents();
+		window.PollEvents();
 
 		// Check for OpenGL errors
-#ifdef DEBUG
+		#ifdef DEBUG
 		GLenum error = glGetError();
 		if (error != GL_NO_ERROR) {
 			std::cerr << "OpenGL error: " << error << std::endl;
 		}
-#endif // DEBUG
+		#endif // DEBUG
 
 	}
 
