@@ -1,3 +1,11 @@
+/* ================================= FILE PURPOSE ===============================
+* 
+*	 This file contains the implementation of the Window class. This class is 
+*  responsible for creating a window using GLFW and GLEW. It also sets the
+*  background color of the window and clears the window.
+* 
+=============================================================================== */
+
 #include "Window.h"
 
 ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windowTitle)
@@ -18,10 +26,13 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwSwapInterval(1);
+	glEnable(GL_DEPTH_TEST);
 
+	// setting the window to not be resizable
+	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
 	// Create a windowed mode window and its OpenGL context
-	window = glfwCreateWindow(2560, 1600, title.c_str(), NULL, NULL);
+	window = glfwCreateWindow(windowWidth, windowHeight, title.c_str(), NULL, NULL);
 	if (!window)
 	{ 
 		#ifdef DEBUG
@@ -31,11 +42,13 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	}
 
 	// Set the window to full screen
-	glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, 2560, 1600, GLFW_DONT_CARE);
+	glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, windowWidth, windowHeight, GLFW_DONT_CARE);
+
 
 	// Make the window's context current
 	glfwMakeContextCurrent(window);
 	glfwSetFramebufferSizeCallback(window, FrameBufferSizeCallback);
+
 
 	// Initialise GLEW
 	if (glewInit() != GLEW_OK)

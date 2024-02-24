@@ -55,12 +55,12 @@ public:
 	/// Function to set a 4D vector uniform in the shader
 	/// </summary>
 	/// <param name="name">- name of parameter</param>
-	void SetVec4(std::string& name, float x, float y, float z, float w);
+	void SetVec4(std::string name, float x, float y, float z, float w);
 
 	/// <summary>
 	/// Function to set a 4x4 matrix uniform in the shader
 	/// </summary>
-	void SetMat4(std::string& name, const glm::mat4& mat);
+	void SetMat4(std::string name, const glm::mat4& mat);
 
 private:
 

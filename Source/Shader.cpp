@@ -73,12 +73,12 @@ void ProtoEngine::Shader::Use()
 	glUseProgram(programID);
 }
 
-void ProtoEngine::Shader::SetVec4(std::string& name, float x, float y, float z, float w)
+void ProtoEngine::Shader::SetVec4(std::string name, float x, float y, float z, float w)
 {
 	glUniform4f(glGetUniformLocation(programID, name.c_str()), x, y, z, w);
 }
 
-void ProtoEngine::Shader::SetMat4(std::string& name, const glm::mat4& mat)
+void ProtoEngine::Shader::SetMat4(std::string name, const glm::mat4& mat)
 {
 	glUniformMatrix4fv(glGetUniformLocation(programID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
 }

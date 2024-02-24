@@ -1,3 +1,12 @@
+/* =============================== FILE PURPOSE =======================================
+* 
+*  This file contains the declaration of the Object class, which is used to create
+*  an object with a set of vertices and indices. It is also used to draw the object
+*  on the screen and to manage the VAO, VBO and EBO. 
+* 
+==================================================================================== */
+
+
 #pragma once
 
 #include <GL/glew.h>

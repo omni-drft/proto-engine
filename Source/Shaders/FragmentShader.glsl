@@ -8,8 +8,12 @@
 
 #version 330 core
 
-out vec4 fragColor;
+uniform vec4 objectColor;
 
-void main() {
-    fragColor = vec4(1.0, 0.0, 0.0, 1.0); // Red color
+out vec4 finalColor;
+
+void main() 
+{
+  // Set the color of the pixel to the color of the object
+  finalColor = objectColor;
 }

@@ -1,3 +1,10 @@
+/* ========================== FILE PURPOSE ==========================
+* 
+*	 This file contains the window class which is used to create 
+*  a window using GLFW and manage all the window related functions.
+* 
+================================================================== */
+
 #pragma once
 
 #include <GL/glew.h>
@@ -43,6 +50,13 @@ public:
 	/// Poll events using the window class
 	/// </summary>
 	void PollEvents() { glfwPollEvents(); }
+
+	/// <summary>
+	/// Function to get the dimensions of the viewport
+	/// </summary>
+	/// <param name="width">- variable that will get window width</param>
+	/// <param name="height">- variable that will get window height</param>
+	void GetDimensions(int* width, int* height) { glfwGetWindowSize(window, width, height); }
 
 	/// <summary>
 	/// Clean the window and set the background color

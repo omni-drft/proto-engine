@@ -1,3 +1,12 @@
+/* ================================ FILE PURPOSE =========================================
+* 
+* This file contains the implementation of the Object class. The Object class
+* is used to represent a drawable object in the software. It contains the vertices
+* and indices of the object, as well as the VAO, VBO, and EBO used to draw the object.
+* 
+======================================================================================= */
+
+
 #include "Object.h"
 
 ProtoEngine::Object::Object(std::vector<float>& vertices, std::vector<int>& indices)

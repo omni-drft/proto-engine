@@ -9,8 +9,24 @@
 
 #version 330 core
 
-layout(location = 0) in vec2 in_position;
+// Input vertex position
+layout(location = 0) in vec2 inPosition;
 
-void main() {
-    gl_Position = vec4(in_position, 0.0, 1.0);
+// Uniforms
+uniform mat4 projection;
+
+// Output
+out vec2 fragTexCoord;
+
+
+void main() 
+{
+  // Transform the vertex position from model space to clip space
+  vec4 transformedPosition = projection * vec4(inPosition, 0.0, 1.0);
+
+  // Pass the texture
+  fragTexCoord = inPosition;
+
+  // Set the gl_Position
+  gl_Position = transformedPosition;
 }
