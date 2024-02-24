@@ -9,16 +9,41 @@
 namespace ProtoEngine 
 {
 
+/// <summary>
+/// This class is used to create an object with a set of vertices and indices.
+/// It is also used to draw the object on the screen and to manage the VAO, VBO and EBO.
+/// </summary>
 class Object
 {
 public:
-	Object();
 
+	/// <summary>
+	/// This constructor is used to create an object with a set of vertices and indices.
+	/// </summary>
+	/// <param name="vertices">- vector of vertices (floats)</param>
+	/// <param name="indices">- vector of indices (ints)</param>
+	Object(std::vector<float>& vertices, std::vector<int>& indices);
+
+	/// <summary>
+	/// Draw the object on the screen.
+	/// </summary>
 	void Draw();
 
 private:
+
+	/// <summary>
+	/// VAO, VBO and EBO used to draw the object on the screen and manage its vertices and indices.
+	/// </summary>
 	unsigned int VAO, VBO, EBO;
+
+	/// <summary>
+	/// Vector of vertices, which are used to determine object position and shape.
+	/// </summary>
 	std::vector<float> vertices;
+
+	/// <summary>
+	/// Vector of indices, which are used to determine order of vertices that will be drawn.
+	/// </summary>
 	std::vector<int> indices;
 };
 
