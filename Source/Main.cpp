@@ -32,7 +32,7 @@ int main()
 
 	// ======================== FIRST OBJECT DATA - ONLY TEMPORARY ========================
 	// Define the vertices of a rectangle
-	std::vector<float> vertices = {
+	std::vector<float> vertices {
 		100.0f, 100.0f,   // bottom-left
 		200.0f, 100.0f,   // bottom-right
 		200.0f, 200.0f,   // top-right
@@ -40,7 +40,7 @@ int main()
 	};
 
 	// Define the indices to form two triangles (making a rectangle)
-	std::vector<int> indices = {
+	std::vector<int> indices {
 			0, 1, 2,  // first triangle
 			2, 3, 0   // second triangle
 	};
@@ -62,13 +62,13 @@ int main()
 	// Create a shader
 	ProtoEngine::Shader shader("Source/Shaders/vertexShader.glsl", "Source/Shaders/fragmentShader.glsl");
 	shader.Use();	
-	int currentWidth, currentHeight;
+	int currentWidth{}, currentHeight{};
 
 	ProtoEngine::Object rectangle(vertices, indices);
 
 	// Check for OpenGL errors
 	#ifdef DEBUG
-	GLenum error = glGetError();
+	GLenum error{ glGetError() };
 	if (error != GL_NO_ERROR) {
 		std::cerr << "OpenGL error: " << error << std::endl;
 	}
@@ -88,8 +88,7 @@ int main()
 
 		glViewport(0, 0, currentWidth, currentHeight);
 
-		glm::mat4 projection 
-			= glm::ortho(0.0f, static_cast<float>(currentWidth), 0.0f, static_cast<float>(currentHeight), -1.0f, 1.0f);
+		glm::mat4 projection{ glm::ortho(0.0f, static_cast<float>(currentWidth), 0.0f, static_cast<float>(currentHeight), -1.0f, 1.0f) };
 
 		shader.SetMat4("projection", projection);
 		shader.SetVec4("objectColor", 0.0f, 0.0f, 0.0f, 1.0f);
@@ -105,7 +104,7 @@ int main()
 
 		// Check for OpenGL errors
 		#ifdef DEBUG
-		GLenum error = glGetError();
+		GLenum error{ glGetError() };
 		if (error != GL_NO_ERROR) {
 			std::cerr << "OpenGL error: " << error << std::endl;
 		}

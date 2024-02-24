@@ -11,19 +11,19 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 	// Read shader files
 	std::ifstream vertexFile(vertexPath);
 	std::ifstream fragmentFile(fragmentPath);
-	std::stringstream vertexStream, fragmentStream;
+	std::stringstream vertexStream{}, fragmentStream{};
 
 	// Read file contents into string streams
 	vertexStream << vertexFile.rdbuf();
 	fragmentStream << fragmentFile.rdbuf();
 	
 	// Convert string streams to strings
-	std::string vertexCode = vertexStream.str();
-	std::string fragmentCode = fragmentStream.str();
+	std::string vertexCode{ vertexStream.str() };
+	std::string fragmentCode{ fragmentStream.str() };
 
 	// Convert strings to char arrays
-	const char* vertexSource = vertexCode.c_str();
-	const char* fragmentSource = fragmentCode.c_str();
+	const char* vertexSource{ vertexCode.c_str() };
+	const char* fragmentSource{ fragmentCode.c_str() };
 
 #ifdef SHADER_DEBUG
 	std::cout << "Vertex shader source:" << std::endl;
@@ -34,8 +34,8 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 
 		
 	// Compile shaders
-	unsigned int vertexShader = CompileShader(GL_VERTEX_SHADER, vertexSource);
-	unsigned int fragmentShader = CompileShader(GL_FRAGMENT_SHADER, fragmentSource);
+	unsigned int vertexShader{ CompileShader(GL_VERTEX_SHADER, vertexSource) };
+	unsigned int fragmentShader{ CompileShader(GL_FRAGMENT_SHADER, fragmentSource) };
 
 	// Link shaders
 	programID = glCreateProgram();
@@ -45,8 +45,8 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 
 #ifdef DEBUG
 	// Check for linking errors
-	int success;
-	char infoLog[512];
+	int success{};
+	char infoLog[512]{};
 	glGetProgramiv(programID, GL_LINK_STATUS, &success);
 	if (!success) {
 		glGetProgramInfoLog(programID, 512, NULL, infoLog);
@@ -92,8 +92,8 @@ unsigned int ProtoEngine::Shader::CompileShader(unsigned int type, const char* s
 
 #ifdef DEBUG
 	// Check for compilation errors
-	int success;
-	char infoLog[512];
+	int success{};
+	char infoLog[512]{};
 	glGetShaderiv(shaderID, GL_COMPILE_STATUS, &success);
 	if (!success) {
 		glGetShaderInfoLog(shaderID, 512, NULL, infoLog);
@@ -106,10 +106,10 @@ unsigned int ProtoEngine::Shader::CompileShader(unsigned int type, const char* s
 
 #ifdef DEBUG
 void ProtoEngine::Shader::PrintShaderInfoLog(GLuint shader) {
-	int maxLength;
+	int maxLength{};
 	glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &maxLength);
 	if (maxLength > 0) {
-		char* infoLog = new char[maxLength];
+		char* infoLog{ new char[maxLength] };
 		glGetShaderInfoLog(shader, maxLength, &maxLength, infoLog);
 		std::cerr << "Shader info log:\n" << infoLog << std::endl;
 		delete[] infoLog;
