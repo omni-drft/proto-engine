@@ -20,6 +20,28 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		#endif // DEBUG
 	}
 
+	// Get the primary monitor, which is necessary to set the window to full screen
+	GLFWmonitor* primatyMonitor = glfwGetPrimaryMonitor();
+	// If the primary monitor is not found, print an error message and return
+	if (!primatyMonitor)
+	{
+		#ifdef DEBUG
+		std::cerr << "Failed to get primary monitor" << std::endl;
+		#endif // DEBUG
+	}
+
+	// Get the video mode of the primary monitor
+	const GLFWvidmode* mode = glfwGetVideoMode(primatyMonitor);
+	// If the video mode is not found, print an error message and create a default mode window
+	if (!mode)
+	{
+		#ifdef DEBUG
+		std::cerr << "Failed to get video mode" << std::endl;
+		#endif // DEBUG
+		// Create a windowed mode window and its OpenGL context
+		window = glfwCreateWindow(800, 600, title.c_str(), NULL, NULL);
+	}
+
 	// Set the OpenGL properties
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -32,7 +54,9 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
 	// Create a windowed mode window and its OpenGL context
-	window = glfwCreateWindow(windowWidth, windowHeight, title.c_str(), NULL, NULL);
+	window = glfwCreateWindow(mode->width, mode->height, title.c_str(), NULL, NULL);
+
+	// Create a windowed mode window and its OpenGL context
 	if (!window)
 	{ 
 		#ifdef DEBUG
@@ -42,7 +66,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	}
 
 	// Set the window to full screen
-	glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, windowWidth, windowHeight, GLFW_DONT_CARE);
+	glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, GLFW_DONT_CARE);
 
 
 	// Make the window's context current
@@ -68,7 +92,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 void ProtoEngine::Window::ClearWindow()
 {
 	// Set the background color
-	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 	// Clear the window
 	glClear(GL_COLOR_BUFFER_BIT);

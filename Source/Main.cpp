@@ -34,9 +34,9 @@ int main()
 	// Define the vertices of a rectangle
 	std::vector<float> vertices {
 		100.0f, 100.0f,   // bottom-left
-		200.0f, 100.0f,   // bottom-right
-		200.0f, 200.0f,   // top-right
-		100.0f, 200.0f    // top-left
+		600.0f, 100.0f,   // bottom-right
+		600.0f, 600.0f,   // top-right
+		100.0f, 600.0f    // top-left
 	};
 
 	// Define the indices to form two triangles (making a rectangle)
@@ -54,7 +54,7 @@ int main()
 	#endif // NDEBUG
 
 	// Create a window
-	ProtoEngine::Window window(2560, 1600, "ProtoEngine");
+	ProtoEngine::Window window(400, 800, "ProtoEngine");
 
 	// Initialise the input handler
 	ProtoEngine::HandleInput inputHandler(window);
@@ -91,7 +91,7 @@ int main()
 		glm::mat4 projection{ glm::ortho(0.0f, static_cast<float>(currentWidth), 0.0f, static_cast<float>(currentHeight), -1.0f, 1.0f) };
 
 		shader.SetMat4("projection", projection);
-		shader.SetVec4("objectColor", 0.0f, 0.0f, 0.0f, 1.0f);
+		shader.SetVec4("objectColor", 1.0f, 0.5f, 0.2f, 1.0f);
 
 		// Draw the rectangle
 		rectangle.Draw();
