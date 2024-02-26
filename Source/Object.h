@@ -15,6 +15,8 @@
 #include <iostream>
 #include <vector>
 
+#include "Vertex.h"
+
 namespace ProtoEngine 
 {
 
@@ -31,7 +33,7 @@ public:
 	/// </summary>
 	/// <param name="vertices">- vector of vertices (floats)</param>
 	/// <param name="indices">- vector of indices (ints)</param>
-	Object(std::vector<float>& vertices, std::vector<int>& indices);
+	Object(std::vector<Vertex>& vertices, std::vector<int>& indices);
 
 	/// <summary>
 	/// Draw the object on the screen.
@@ -48,7 +50,7 @@ private:
 	/// <summary>
 	/// Vector of vertices, which are used to determine object position and shape.
 	/// </summary>
-	std::vector<float> vertices;
+	std::vector<Vertex> vertices;
 
 	/// <summary>
 	/// Vector of indices, which are used to determine order of vertices that will be drawn.

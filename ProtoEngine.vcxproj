@@ -467,6 +467,7 @@
     <ClInclude Include="Source\HandleInput.h" />
     <ClInclude Include="Source\Shader.h" />
     <ClInclude Include="Source\Window.h" />
+    <ClInclude Include="Source\Vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp" />

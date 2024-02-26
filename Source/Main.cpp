@@ -25,6 +25,7 @@
 #include "Shader.h"
 #include "Window.h"
 #include "Object.h"
+#include "Vertex.h"
 
 int main()
 {
@@ -32,11 +33,11 @@ int main()
 
 	// ======================== FIRST OBJECT DATA - ONLY TEMPORARY ========================
 	// Define the vertices of a rectangle
-	std::vector<float> vertices {
-		100.0f, 100.0f,   // bottom-left
-		600.0f, 100.0f,   // bottom-right
-		600.0f, 600.0f,   // top-right
-		100.0f, 600.0f    // top-left
+	std::vector<ProtoEngine::Vertex> vertices{
+		{100.0f, 100.0f},   // bottom-left
+		{600.0f, 100.0f},   // bottom-right
+		{600.0f, 600.0f},   // top-right
+		{100.0f, 600.0f}   // top-left
 	};
 
 	// Define the indices to form two triangles (making a rectangle)

@@ -935,6 +935,7 @@
     </ClInclude>
     <ClInclude Include="Source\Window.h" />
     <ClInclude Include="Source\Object.h" />
+    <ClInclude Include="Source\Vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp">

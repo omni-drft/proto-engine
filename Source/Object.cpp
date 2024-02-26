@@ -9,7 +9,7 @@
 
 #include "Object.h"
 
-ProtoEngine::Object::Object(std::vector<float>& vertices, std::vector<int>& indices)
+ProtoEngine::Object::Object(std::vector<Vertex>& vertices, std::vector<int>& indices)
 	: vertices(vertices), indices(indices)
 {
 	// Generate VAO, VBO, and EBO
