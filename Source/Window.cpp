@@ -11,12 +11,18 @@
 ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windowTitle)
 	: width(windowWidth), height(windowHeight), title(windowTitle), window(nullptr)
 {
-	// Initialise GLFW
+	// Initialize GLFW
 	if (!glfwInit())
 	{
 		#ifdef DEBUG
 		std::cerr << "Failed to initialize GLFW" << std::endl;
 		return;
+		#endif // DEBUG
+	}
+	else
+	{
+		#ifdef DEBUG
+		std::cout << "GLFW initialized succesfully" << std::endl;
 		#endif // DEBUG
 	}
 
@@ -27,6 +33,12 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	{
 		#ifdef DEBUG
 		std::cerr << "Failed to get primary monitor" << std::endl;
+		#endif // DEBUG
+	}
+	else
+	{
+		#ifdef DEBUG
+		std::cout << "Primary monitor found" << std::endl;
 		#endif // DEBUG
 	}
 
@@ -40,6 +52,12 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		#endif // DEBUG
 		// Create a windowed mode window and its OpenGL context
 		window = glfwCreateWindow(800, 600, title.c_str(), NULL, NULL);
+	}
+	else
+	{
+		#ifdef DEBUG
+		std::cout << "Video mode found" << std::endl;
+		#endif // DEBUG
 	}
 
 	// Set the OpenGL properties
@@ -64,6 +82,12 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		return;
 		#endif // DEBUG
 	}
+	else
+	{
+		#ifdef DEBUG
+		std::cout << "Window created succesfully" << std::endl;
+		#endif // DEBUG
+	}
 
 	// Set the window to full screen
 	glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, GLFW_DONT_CARE);
@@ -74,7 +98,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	glfwSetFramebufferSizeCallback(window, FrameBufferSizeCallback);
 
 
-	// Initialise GLEW
+	// Initialize GLEW
 	if (glewInit() != GLEW_OK)
 	{
 		#ifdef DEBUG
@@ -82,14 +106,26 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		return;
 		#endif // DEBUG
 	}
+	else
+	{
+		#ifdef DEBUG
+		std::cout << "GLEW initialized succesfully" << std::endl;
+		#endif // DEBUG
+	}
 
-	// Initialise FreeType
+	// Initialize FreeType
 	FT_Library ft;
 	if (FT_Init_FreeType(&ft))
 	{
 		#ifdef DEBUG
 		std::cerr << "Failed to initialize FreeType" << std::endl;
 		return;
+		#endif // DEBUG
+	}
+	else
+	{
+		#ifdef DEBUG
+		std::cout << "FreeType initialized succesfully" << std::endl;
 		#endif // DEBUG
 	}
 
@@ -100,6 +136,12 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		#ifdef DEBUG
 		std::cerr << "Failed to load font" << std::endl;
 		return;
+		#endif // DEBUG
+	}
+	else
+	{
+		#ifdef DEBUG
+		std::cout << "Font loaded succesfully" << std::endl;
 		#endif // DEBUG
 	}
 

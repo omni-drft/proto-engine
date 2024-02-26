@@ -57,7 +57,7 @@ int main()
 	// Create a window
 	ProtoEngine::Window window(400, 800, "ProtoEngine");
 
-	// Initialise the input handler
+	// Initialize the input handler
 	ProtoEngine::HandleInput inputHandler(window);
 
 	// Create a shader
