@@ -83,6 +83,29 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		#endif // DEBUG
 	}
 
+	// Initialise FreeType
+	FT_Library ft;
+	if (FT_Init_FreeType(&ft))
+	{
+		#ifdef DEBUG
+		std::cerr << "Failed to initialize FreeType" << std::endl;
+		return;
+		#endif // DEBUG
+	}
+
+	// Load the font
+	FT_Face face;
+	if (FT_New_Face(ft, "Assets/Fonts/SourceCodePro.ttf", 0, &face))
+	{
+		#ifdef DEBUG
+		std::cerr << "Failed to load font" << std::endl;
+		return;
+		#endif // DEBUG
+	}
+
+	// Set the font size
+	FT_Set_Pixel_Sizes(face, 0, 48);
+
 	#ifdef DEBUG
 	// Print the OpenGL version
 	std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;

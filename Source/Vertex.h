@@ -11,7 +11,8 @@
 namespace ProtoEngine
 {
 	/// <summary>
-	/// This class represents a 2D vertex and is being used for better readability of object coordinates.
+	/// This class represents a 2D vertex and is being used 
+	/// for better readability of object coordinates.
 	/// </summary>
 	class Vertex
 	{

@@ -98,7 +98,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -111,8 +111,8 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'">
@@ -120,7 +120,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -129,8 +129,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='InputDebug Win64|x64'">
@@ -138,7 +138,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;INPUT_DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -147,8 +147,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ShaderDebug Win64|x64'">
@@ -156,7 +156,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;SHADER_DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -165,11 +165,66 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftheader.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftoption.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\integer-types.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\mac-support.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\public-macros.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\freetype.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftadvanc.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftbbox.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftbdf.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftbitmap.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftbzip2.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftcache.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftchapters.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftcid.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftcolor.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftdriver.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\fterrdef.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\fterrors.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftgasp.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftglyph.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftgxval.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftgzip.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftimage.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftincrem.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftlist.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftlogging.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftlzw.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftmac.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftmm.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftmodapi.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftmoderr.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftotval.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftoutln.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftparams.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftpfr.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftrender.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftsizes.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftsnames.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftstroke.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftsynth.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftsystem.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\fttrigon.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\fttypes.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\otsvg.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\t1tables.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ttnameid.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\tttables.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\freetype\tttags.h" />
+    <ClInclude Include="Dependencies\FREETYPE\include\ft2build.h" />
     <ClInclude Include="Dependencies\GLEW\include\GL\eglew.h" />
     <ClInclude Include="Dependencies\GLEW\include\GL\glew.h" />
     <ClInclude Include="Dependencies\GLEW\include\GL\glxew.h" />
@@ -463,17 +518,17 @@
     <ClInclude Include="Dependencies\GLM\glm\vec3.hpp" />
     <ClInclude Include="Dependencies\GLM\glm\vec4.hpp" />
     <ClInclude Include="Dependencies\GLM\glm\vector_relational.hpp" />
-    <ClInclude Include="Source\Object.h" />
     <ClInclude Include="Source\HandleInput.h" />
+    <ClInclude Include="Source\Object.h" />
     <ClInclude Include="Source\Shader.h" />
-    <ClInclude Include="Source\Window.h" />
     <ClInclude Include="Source\Vertex.h" />
+    <ClInclude Include="Source\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp" />
-    <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\HandleInput.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\Shader.cpp" />
     <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
