@@ -1104,6 +1104,9 @@
     <ClInclude Include="Dependencies\GLM\glm\vector_relational.hpp">
       <Filter>Dependencies\GLM\glm</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Character.h">
+      <Filter>Source</Filter>
+    </ClInclude>
     <ClInclude Include="Source\HandleInput.h">
       <Filter>Source</Filter>
     </ClInclude>

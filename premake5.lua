@@ -64,3 +64,9 @@ project "ProtoEngine"
 	filter "platforms:Win64"
 		system "Windows"
 		architecture "x86_64"
+
+		-- This warning occurs because i used precompiled version
+		-- of FreeType. This isn't an issue. I might use building 
+		-- from source in the future, in that case this warning will be removed.
+		-- For now i just ignore this warning because it's annoying.
+		linkoptions { "/IGNORE:4099" }

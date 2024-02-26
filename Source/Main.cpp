@@ -46,7 +46,7 @@ int main()
 			2, 3, 0   // second triangle
 	};
 	// ====================================================================================
-
+		
 
 
 	// Close the console window if in release mode

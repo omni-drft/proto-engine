@@ -72,7 +72,9 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
 	// Create a windowed mode window and its OpenGL context
+	#pragma warning(disable 6011)
 	window = glfwCreateWindow(mode->width, mode->height, title.c_str(), NULL, NULL);
+	#pragma warning(default 6011)
 
 	// Create a windowed mode window and its OpenGL context
 	if (!window)
@@ -114,7 +116,6 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	}
 
 	// Initialize FreeType
-	FT_Library ft;
 	if (FT_Init_FreeType(&ft))
 	{
 		#ifdef DEBUG
@@ -130,7 +131,6 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	}
 
 	// Load the font
-	FT_Face face;
 	if (FT_New_Face(ft, "Assets/Fonts/SourceCodePro.ttf", 0, &face))
 	{
 		#ifdef DEBUG
@@ -148,6 +148,56 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	// Set the font size
 	FT_Set_Pixel_Sizes(face, 0, 48);
 
+	// Create map of character glyphs
+	std::map<char, Character> characters;
+
+	// Disable byte-alignment restriction
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1); 
+
+	// Load the first 128 characters of the ASCII set
+	for (unsigned char c{ 0 }; c < 128; c++)
+	{
+		// load character glyph 
+		if (FT_Load_Char(face, c, FT_LOAD_RENDER))
+		{
+			#ifdef DEBUG
+			std::cerr << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
+			#endif // DEBUG
+			continue;
+		}
+
+		// generate texture
+		unsigned int texture;
+		glGenTextures(1, &texture);
+		glBindTexture(GL_TEXTURE_2D, texture);
+		glTexImage2D(
+			GL_TEXTURE_2D,
+			0,
+			GL_RED,
+			face->glyph->bitmap.width,
+			face->glyph->bitmap.rows,
+			0,
+			GL_RED,
+			GL_UNSIGNED_BYTE,
+			face->glyph->bitmap.buffer
+		);
+
+		// set texture options
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+		// now store character for later use
+		Character character = {
+				texture,
+				glm::ivec2(face->glyph->bitmap.width, face->glyph->bitmap.rows),
+				glm::ivec2(face->glyph->bitmap_left, face->glyph->bitmap_top),
+				face->glyph->advance.x
+		};
+		characters.insert(std::pair<char, Character>(c, character));
+	}
+
 	#ifdef DEBUG
 	// Print the OpenGL version
 	std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
@@ -159,8 +209,18 @@ void ProtoEngine::Window::ClearWindow()
 	// Set the background color
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-	// Clear the window
+	// Clear the window	
 	glClear(GL_COLOR_BUFFER_BIT);
+}
+
+ProtoEngine::Window::~Window()
+{
+	// Terminate GLFW
+	glfwTerminate();
+
+	// Terminate FreeType
+	FT_Done_Face(face);
+	FT_Done_FreeType(ft);
 }
 
 void ProtoEngine::Window::FrameBufferSizeCallback(GLFWwindow* window, int width, int height)

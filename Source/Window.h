@@ -2,6 +2,8 @@
 * 
 *	 This file contains the window class which is used to create 
 *  a window using GLFW and manage all the window related functions.
+*  It also initialises all dependencies that the project needs (that 
+*  will probably change in the future).
 * 
 ================================================================== */
 
@@ -14,83 +16,103 @@
 
 #include <iostream>
 #include <string>
+#include <map>
+
+#include "Character.h"
 
 namespace ProtoEngine
 {
 
-/// <summary>
-/// This class is used to create a window using GLFW
-/// </summary>
-class Window
-{
-public:
 	/// <summary>
-	/// Main constructor for the window class
+	/// This class is used to create a window using GLFW
 	/// </summary>
-	/// <param name="windowWidth">- width of the window</param>
-	/// <param name="windowHeight">- height of the window</param>
-	/// <param name="windowTitle">- title of the window</param>
-	Window(int windowWidth, int windowHeight, const char* windowTitle);
+	class Window
+	{
+	public:
+		/// <summary>
+		/// Main constructor for the window class
+		/// </summary>
+		/// <param name="windowWidth">- width of the window</param>
+		/// <param name="windowHeight">- height of the window</param>
+		/// <param name="windowTitle">- title of the window</param>
+		Window(int windowWidth, int windowHeight, const char* windowTitle);
 
-	/// <summary>
-	/// Window getter
-	/// </summary>
-	/// <returns>window</returns>
-	GLFWwindow* GetWindow() { return window; }
+		/// <summary>
+		/// Window getter
+		/// </summary>
+		/// <returns>window</returns>
+		GLFWwindow* GetWindow() { return window; }
 
-	/// <summary>
-	/// Function to close the window
-	/// </summary>
-	void SetShouldClose(bool value) { glfwSetWindowShouldClose(window, true); }
+		/// <summary>
+		/// Function to close the window
+		/// </summary>
+		void SetShouldClose(bool value) { glfwSetWindowShouldClose(window, true); }
 
-	/// <summary>
-	/// Swap the front and back buffers using the window class
-	/// </summary>
-	void SwapBuffers() { glfwSwapBuffers(window); }
+		/// <summary>
+		/// Swap the front and back buffers using the window class
+		/// </summary>
+		void SwapBuffers() { glfwSwapBuffers(window); }
 
-	/// <summary>
-	/// Poll events using the window class
-	/// </summary>
-	void PollEvents() { glfwPollEvents(); }
+		/// <summary>
+		/// Poll events using the window class
+		/// </summary>
+		void PollEvents() { glfwPollEvents(); }
 
-	/// <summary>
-	/// Function to get the dimensions of the viewport
-	/// </summary>
-	/// <param name="width">- variable that will get window width</param>
-	/// <param name="height">- variable that will get window height</param>
-	void GetDimensions(int* width, int* height) { glfwGetWindowSize(window, width, height); }
+		/// <summary>
+		/// Function to get the dimensions of the viewport
+		/// </summary>
+		/// <param name="width">- variable that will get window width</param>
+		/// <param name="height">- variable that will get window height</param>
+		void GetDimensions(int* width, int* height) { glfwGetWindowSize(window, width, height); }
 
-	/// <summary>
-	/// Clean the window and set the background color
-	/// </summary>
-	void ClearWindow();
+		/// <summary>
+		/// Clean the window and set the background color
+		/// </summary>
+		void ClearWindow();
 
-private:
+		/// <summary>
+		/// Destructor for the window class.
+		/// This will terminate GLFW and free up any resources that were used.
+		/// It executes at the end of the program.
+		/// </summary>
+		~Window();
 
-	/// <summary>
-	/// Width of the window
-	/// </summary>
-	unsigned int width;
+	private:
 
-	/// <summary>
-	/// Height of the window
-	/// </summary>
-	unsigned int height;
+		/// <summary>
+		/// Width of the window
+		/// </summary>
+		unsigned int width;
 
-	/// <summary>
-	/// Title of the window 
-	/// </summary>
-	std::string title;
+		/// <summary>
+		/// Height of the window
+		/// </summary>
+		unsigned int height;
 
-	/// <summary>
-	/// GLFW window pointer
-	/// </summary>
-	GLFWwindow* window;
+		/// <summary>
+		/// Title of the window 
+		/// </summary>
+		std::string title;
 
-	/// <summary>
-	/// Frame buffer size callback function
-	/// </summary>
-	static void FrameBufferSizeCallback(GLFWwindow* window, int width, int height);
-};
+		/// <summary>
+		/// GLFW window pointer
+		/// </summary>
+		GLFWwindow* window;
+
+		/// <summary>
+		/// FreeType library
+		/// </summary>
+		FT_Library ft;
+
+		/// <summary>
+		/// FreeType face
+		/// </summary>
+		FT_Face face;
+
+		/// <summary>
+		/// Frame buffer size callback function
+		/// </summary>
+		static void FrameBufferSizeCallback(GLFWwindow* window, int width, int height);
+	};
 
 }
