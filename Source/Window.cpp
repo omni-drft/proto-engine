@@ -26,39 +26,39 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		#endif // DEBUG
 	}
 
-	// Get the primary monitor, which is necessary to set the window to full screen
-	GLFWmonitor* primatyMonitor = glfwGetPrimaryMonitor();
-	// If the primary monitor is not found, print an error message and return
-	if (!primatyMonitor)
-	{
-		#ifdef DEBUG
-		std::cerr << "Failed to get primary monitor" << std::endl;
-		#endif // DEBUG
-	}
-	else
-	{
-		#ifdef DEBUG
-		std::cout << "Primary monitor found" << std::endl;
-		#endif // DEBUG
-	}
+	//// Get the primary monitor, which is necessary to set the window to full screen
+	//GLFWmonitor* primatyMonitor = glfwGetPrimaryMonitor();
+	//// If the primary monitor is not found, print an error message and return
+	//if (!primatyMonitor)
+	//{
+	//	#ifdef DEBUG
+	//	std::cerr << "Failed to get primary monitor" << std::endl;
+	//	#endif // DEBUG
+	//}
+	//else
+	//{
+	//	#ifdef DEBUG
+	//	std::cout << "Primary monitor found" << std::endl;
+	//	#endif // DEBUG
+	//}
 
-	// Get the video mode of the primary monitor
-	const GLFWvidmode* mode = glfwGetVideoMode(primatyMonitor);
-	// If the video mode is not found, print an error message and create a default mode window
-	if (!mode)
-	{
-		#ifdef DEBUG
-		std::cerr << "Failed to get video mode" << std::endl;
-		#endif // DEBUG
-		// Create a windowed mode window and its OpenGL context
-		window = glfwCreateWindow(800, 600, title.c_str(), NULL, NULL);
-	}
-	else
-	{
-		#ifdef DEBUG
-		std::cout << "Video mode found" << std::endl;
-		#endif // DEBUG
-	}
+	//// Get the video mode of the primary monitor
+	//const GLFWvidmode* mode = glfwGetVideoMode(primatyMonitor);
+	//// If the video mode is not found, print an error message and create a default mode window
+	//if (!mode)
+	//{
+	//	#ifdef DEBUG
+	//	std::cerr << "Failed to get video mode" << std::endl;
+	//	#endif // DEBUG
+	//	// Create a windowed mode window and its OpenGL context
+	//	window = glfwCreateWindow(800, 600, title.c_str(), NULL, NULL);
+	//}
+	//else
+	//{
+	//	#ifdef DEBUG
+	//	std::cout << "Video mode found" << std::endl;
+	//	#endif // DEBUG
+	//}
 
 	// Set the OpenGL properties
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -69,11 +69,11 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	glEnable(GL_DEPTH_TEST);
 
 	// setting the window to not be resizable
-	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+	//glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
 	// Create a windowed mode window and its OpenGL context
 	#pragma warning(disable 6011)
-	window = glfwCreateWindow(mode->width, mode->height, title.c_str(), NULL, NULL);
+	window = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
 	#pragma warning(default 6011)
 
 	// Create a windowed mode window and its OpenGL context
@@ -92,7 +92,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	}
 
 	// Set the window to full screen
-	glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, GLFW_DONT_CARE);
+	//glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, GLFW_DONT_CARE);
 
 
 	// Make the window's context current
@@ -219,8 +219,8 @@ ProtoEngine::Window::~Window()
 	glfwTerminate();
 
 	// Terminate FreeType
-	FT_Done_Face(face);
-	FT_Done_FreeType(ft);
+	//FT_Done_Face(face);
+	//FT_Done_FreeType(ft);
 }
 
 void ProtoEngine::Window::FrameBufferSizeCallback(GLFWwindow* window, int width, int height)

@@ -30,13 +30,13 @@ namespace ProtoEngine
 		/// Constructor for the input handler
 		/// </summary>
 		/// <param name="window">- pointer to window that currently takes input</param>
-		HandleInput(ProtoEngine::Window window);
+		HandleInput(Window* window);
 
 	private:
 		/// <summary>
 		/// Current window that is taking input
 		/// </summary>
-		ProtoEngine::Window inputWindow;
+		Window* inputWindow;
 
 		/// <summary>
 		/// Static callback function for handling all key presses

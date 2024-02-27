@@ -6,24 +6,24 @@
 
 #include "HandleInput.h"
 
-ProtoEngine::HandleInput::HandleInput(ProtoEngine::Window window)
+ProtoEngine::HandleInput::HandleInput(ProtoEngine::Window* window)
 	: inputWindow(window)
 {
 
 	// Set the key callback function
-	glfwSetKeyCallback(window.GetWindow(), KeyCallback);
+	glfwSetKeyCallback(inputWindow->GetWindow(), KeyCallback);
 
 	// Set the cursor position callback function
-	glfwSetCursorPosCallback(window.GetWindow(), CursorPositionCallback);
+	glfwSetCursorPosCallback(inputWindow->GetWindow(), CursorPositionCallback);
 
 	// Set the mouse button callback function
-	glfwSetMouseButtonCallback(window.GetWindow(), MouseButtonCallback);
+	glfwSetMouseButtonCallback(inputWindow->GetWindow(), MouseButtonCallback);
 
 	// Set the scroll callback function
-	glfwSetScrollCallback(window.GetWindow(), ScrollCallback);
+	glfwSetScrollCallback(inputWindow->GetWindow(), ScrollCallback);
 
 	// Set the character callback function
-	glfwSetCharCallback(window.GetWindow(), CharacterCallback);
+	glfwSetCharCallback(inputWindow->GetWindow(), CharacterCallback);
 }
 
 void ProtoEngine::HandleInput::KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -38,10 +38,10 @@ void ProtoEngine::HandleInput::KeyCallback(GLFWwindow* window, int key, int scan
 void ProtoEngine::HandleInput::CursorPositionCallback(GLFWwindow* window, double xpos, double ypos)
 {
 
-#if INPUT_DEBUG
+	#if INPUT_DEBUG
 	// Print the current cursor position whenever the cursor moves
 	std::cout << "X: " << xpos << " Y: " << ypos << std::endl;
-#endif 
+	#endif 
 
 }
 
@@ -51,25 +51,25 @@ void ProtoEngine::HandleInput::MouseButtonCallback(GLFWwindow* window, int butto
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
 	{
 
-#ifdef INPUT_DEBUG
+	#ifdef INPUT_DEBUG
 		std::cout << "Left mouse button pressed" << std::endl;
-#endif
+	#endif
 
 	}
 	if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
 	{
 
-#ifdef INPUT_DEBUG
+	#ifdef INPUT_DEBUG
 		std::cout << "Right mouse button pressed" << std::endl;
-#endif 
+	#endif 
 
 	}
 	if (button == GLFW_MOUSE_BUTTON_MIDDLE && action == GLFW_PRESS)
 	{
 
-#ifdef INPUT_DEBUG
+	#ifdef INPUT_DEBUG
 		std::cout << "Middle mouse button pressed" << std::endl;
-#endif
+	#endif
 
 	}
 }

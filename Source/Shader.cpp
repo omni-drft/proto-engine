@@ -8,10 +8,24 @@
 
 ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 {
+#ifdef DEBUG
+	GLenum error = glGetError();
+	if (error != GL_NO_ERROR) {
+		std::cerr << "OpenGL error: " << error << std::endl;
+	}
+#endif // DEBUG
+
 	// Read shader files
 	std::ifstream vertexFile(vertexPath);
 	std::ifstream fragmentFile(fragmentPath);
 	std::stringstream vertexStream{}, fragmentStream{};
+
+#ifdef DEBUG
+	error = glGetError();
+	if (error != GL_NO_ERROR) {
+		std::cerr << "OpenGL error: " << error << std::endl;
+	}
+#endif // DEBUG
 
 	// Read file contents into string streams
 	vertexStream << vertexFile.rdbuf();
@@ -25,12 +39,12 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 	const char* vertexSource{ vertexCode.c_str() };
 	const char* fragmentSource{ fragmentCode.c_str() };
 
-#ifdef SHADER_DEBUG
+	#ifdef SHADER_DEBUG
 	std::cout << "Vertex shader source:" << std::endl;
 	std::cout << vertexSource << std::endl;
 	std::cout << std::endl << "Fragment shader source:" << std::endl;
 	std::cout << fragmentSource << std::endl;
-#endif // SHADER_DEBUG
+	#endif // SHADER_DEBUG
 
 		
 	// Compile shaders
@@ -43,16 +57,16 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 	glAttachShader(programID, fragmentShader);
 	glLinkProgram(programID);
 
-#ifdef DEBUG
+	#ifdef DEBUG
 	// Check for linking errors
-	int success{};
-	char infoLog[512]{};
+	int success;
+	char infoLog[512];
 	glGetProgramiv(programID, GL_LINK_STATUS, &success);
 	if (!success) {
 		glGetProgramInfoLog(programID, 512, NULL, infoLog);
 		std::cerr << "Shader program linking error:\n" << infoLog << std::endl;
 	}
-#endif // DEBUG
+	#endif // DEBUG
 
 	// Shader info log
 	PrintShaderInfoLog(vertexShader);
@@ -92,15 +106,14 @@ unsigned int ProtoEngine::Shader::CompileShader(unsigned int type, const char* s
 
 #ifdef DEBUG
 	// Check for compilation errors
-	int success{};
-	char infoLog[512]{};
+	int success;
+	char infoLog[512];
 	glGetShaderiv(shaderID, GL_COMPILE_STATUS, &success);
 	if (!success) {
 		glGetShaderInfoLog(shaderID, 512, NULL, infoLog);
 		std::cerr << "Shader compilation error:\n" << infoLog << std::endl;
 	}
 #endif // DEBUG
-
 	return shaderID;
 }
 

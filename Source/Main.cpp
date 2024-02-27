@@ -55,25 +55,19 @@ int main()
 	#endif // NDEBUG
 
 	// Create a window
-	ProtoEngine::Window window(400, 800, "ProtoEngine");
+	ProtoEngine::Window window(1600, 800, "ProtoEngine");
+
 
 	// Initialize the input handler
-	ProtoEngine::HandleInput inputHandler(window);
+	ProtoEngine::HandleInput inputHandler(&window);
 
 	// Create a shader
-	ProtoEngine::Shader shader("Source/Shaders/vertexShader.glsl", "Source/Shaders/fragmentShader.glsl");
+	ProtoEngine::Shader shader("Source/Shaders/VertexShader.glsl", "Source/Shaders/FragmentShader.glsl");
 	shader.Use();	
+
+
 	int currentWidth{}, currentHeight{};
-
 	ProtoEngine::Object rectangle(vertices, indices);
-
-	// Check for OpenGL errors
-	#ifdef DEBUG
-	GLenum error{ glGetError() };
-	if (error != GL_NO_ERROR) {
-		std::cerr << "OpenGL error: " << error << std::endl;
-	}
-	#endif // DEBUG
 
 	// Loop until the user closes the window
 	while (!glfwWindowShouldClose(window.GetWindow()))
@@ -102,15 +96,6 @@ int main()
 
 		// Poll for and process events
 		window.PollEvents();
-
-		// Check for OpenGL errors
-		#ifdef DEBUG
-		GLenum error{ glGetError() };
-		if (error != GL_NO_ERROR) {
-			std::cerr << "OpenGL error: " << error << std::endl;
-		}
-		#endif // DEBUG
-
 	}
 
 	return 0;
