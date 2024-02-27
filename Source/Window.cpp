@@ -219,8 +219,8 @@ ProtoEngine::Window::~Window()
 	glfwTerminate();
 
 	// Terminate FreeType
-	//FT_Done_Face(face);
-	//FT_Done_FreeType(ft);
+	FT_Done_Face(face);
+	FT_Done_FreeType(ft);
 }
 
 void ProtoEngine::Window::FrameBufferSizeCallback(GLFWwindow* window, int width, int height)
