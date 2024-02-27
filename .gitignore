@@ -20,12 +20,6 @@
 *.mod
 *.smod
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
 # Executables
 *.exe
 *.out
@@ -59,21 +53,6 @@
 # Mono auto generated files
 mono_crash.*
 
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -83,19 +62,12 @@ bld/
 # Visual Studio 2017 auto generated files
 Generated\ Files/
 
-# MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
 
 # NUnit
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
 
-# Build Results of an ATL Project
-[Dd]ebugPS/
-[Rr]eleasePS/
-dlldata.c
 
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
@@ -207,8 +179,6 @@ AutoTest.Net/
 # Web workbench (sass)
 .sass-cache/
 
-# Installshield output folder
-[Ee]xpress/
 
 # DocProject is a documentation generator add-in
 DocProject/buildhelp/
