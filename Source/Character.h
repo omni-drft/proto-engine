@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <glm/glm.hpp>
+#include <map>
 
 namespace ProtoEngine
 {
@@ -12,4 +13,7 @@ namespace ProtoEngine
 		glm::ivec2 bearing;
 		unsigned int advance;
 	};
+
+	// Create map of character glyphs
+	extern std::map<char, Character> characters;
 } // namespace ProtoEngine

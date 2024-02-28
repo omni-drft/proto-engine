@@ -54,8 +54,14 @@ namespace ProtoEngine
 		/// <summary>
 		/// Function to set a 4D vector uniform in the shader
 		/// </summary>
-		/// <param name="name">- name of parameter</param>
+		/// <param name="name">- name of uniform</param>
 		void SetVec4(std::string name, float x, float y, float z, float w);
+
+		/// <summary>
+		/// Function to set a 3D vector uniform in the shader
+		/// </summary>
+		/// <param name="name">- name of uniform</param>
+		void SetVec3(std::string name, float x, float y, float z);
 
 		/// <summary>
 		/// Function to set a 4x4 matrix uniform in the shader

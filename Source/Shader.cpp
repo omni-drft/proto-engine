@@ -66,6 +66,10 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 		glGetProgramInfoLog(programID, 512, NULL, infoLog);
 		std::cerr << "Shader program linking error:\n" << infoLog << std::endl;
 	}
+	else
+	{
+		std::cout << "Shader program linked successfully" << std::endl;
+	}
 	#endif // DEBUG
 
 	// Shader info log
@@ -92,6 +96,11 @@ void ProtoEngine::Shader::SetVec4(std::string name, float x, float y, float z, f
 	glUniform4f(glGetUniformLocation(programID, name.c_str()), x, y, z, w);
 }
 
+void ProtoEngine::Shader::SetVec3(std::string name, float x, float y, float z)
+{
+	glUniform3f(glGetUniformLocation(programID, name.c_str()), x, y, z);
+}
+
 void ProtoEngine::Shader::SetMat4(std::string name, const glm::mat4& mat)
 {
 	glUniformMatrix4fv(glGetUniformLocation(programID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
@@ -112,6 +121,10 @@ unsigned int ProtoEngine::Shader::CompileShader(unsigned int type, const char* s
 	if (!success) {
 		glGetShaderInfoLog(shaderID, 512, NULL, infoLog);
 		std::cerr << "Shader compilation error:\n" << infoLog << std::endl;
+	}
+	else
+	{
+		std::cout << "Shader compiled successfully" << std::endl;
 	}
 #endif // DEBUG
 	return shaderID;

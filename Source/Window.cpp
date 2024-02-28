@@ -67,6 +67,8 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwSwapInterval(1);
 	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	// setting the window to not be resizable
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
@@ -148,8 +150,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	// Set the font size
 	FT_Set_Pixel_Sizes(face, 0, 48);
 
-	// Create map of character glyphs
-	std::map<char, Character> characters;
+	
 
 	// Disable byte-alignment restriction
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1); 
@@ -161,7 +162,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 		if (FT_Load_Char(face, c, FT_LOAD_RENDER))
 		{
 			#ifdef DEBUG
-			std::cerr << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
+			std::cerr << "ERROR::FREETYPE: Failed to load Glyph" << std::endl;
 			#endif // DEBUG
 			continue;
 		}

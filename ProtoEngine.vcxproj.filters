@@ -1122,6 +1122,7 @@
     <ClInclude Include="Source\Window.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Text.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp">
@@ -1142,5 +1143,11 @@
     <ClCompile Include="Source\Window.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Text.cpp" />
+    <ClCompile Include="Source\Character.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\GlyphVertexShader.glsl" />
+    <None Include="Source\Shaders\GlyphFragmentShader.glsl" />
   </ItemGroup>
 </Project>

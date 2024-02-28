@@ -26,6 +26,8 @@
 #include "Window.h"
 #include "Object.h"
 #include "Vertex.h"
+#include "Text.h"
+#include "Character.h"
 
 int main()
 {
@@ -61,13 +63,22 @@ int main()
 	// Initialize the input handler
 	ProtoEngine::HandleInput inputHandler(&window);
 
-	// Create a shader
-	ProtoEngine::Shader shader("Source/Shaders/VertexShader.glsl", "Source/Shaders/FragmentShader.glsl");
-	shader.Use();	
-
-
+	// Create shader for objects
+	ProtoEngine::Shader objectShader("Source/Shaders/VertexShader.glsl", "Source/Shaders/FragmentShader.glsl");
+	objectShader.Use();	
 	int currentWidth{}, currentHeight{};
+	window.GetDimensions(&currentWidth, &currentHeight);
+	glm::mat4 projection{ glm::ortho(0.0f, static_cast<float>(currentWidth), 0.0f, static_cast<float>(currentHeight), -1.0f, 1.0f) };
+	objectShader.SetMat4("projection", projection);
+	objectShader.SetVec4("objectColor", 1.0f, 0.5f, 0.2f, 1.0f);
+
+	// Create shader for text rendering
+	ProtoEngine::Shader textShader("Source/Shaders/GlyphVertexShader.glsl", "Source/Shaders/GlyphFragmentShader.glsl");
+	textShader.SetMat4("projection", projection);
+	
 	ProtoEngine::Object rectangle(vertices, indices);
+
+	ProtoEngine::Text text("Rudy to cwel!");
 
 	// Loop until the user closes the window
 	while (!glfwWindowShouldClose(window.GetWindow()))
@@ -75,21 +86,16 @@ int main()
 		// Clear the window
 		window.ClearWindow();
 
-		// Use the shader
-		shader.Use();
-
-		// Set the projection matrix
+		// Update the window dimensions and viewport
+		glViewport(0, 0, currentWidth, currentHeight);
 		window.GetDimensions(&currentWidth, &currentHeight);
 
-		glViewport(0, 0, currentWidth, currentHeight);
+		// Draw the object
+		//objectShader.Use();
+		//rectangle.Draw();
 
-		glm::mat4 projection{ glm::ortho(0.0f, static_cast<float>(currentWidth), 0.0f, static_cast<float>(currentHeight), -1.0f, 1.0f) };
-
-		shader.SetMat4("projection", projection);
-		shader.SetVec4("objectColor", 1.0f, 0.5f, 0.2f, 1.0f);
-
-		// Draw the rectangle
-		rectangle.Draw();
+		// Draw the text
+		text.Render(textShader, 100.0f, 100.0f, 5.0f, glm::vec3(1.0f, 1.0f, 1.0f));
 
 		// Swap front and back buffers
 		window.SwapBuffers();

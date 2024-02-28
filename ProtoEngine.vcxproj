@@ -528,14 +528,21 @@
     <ClInclude Include="Source\Shader.h" />
     <ClInclude Include="Source\Vertex.h" />
     <ClInclude Include="Source\Window.h" />
+    <ClInclude Include="Source\Text.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp" />
+    <ClCompile Include="Source\Character.cpp" />
     <ClCompile Include="Source\HandleInput.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\Shader.cpp" />
     <ClCompile Include="Source\Window.cpp" />
+    <ClCompile Include="Source\Text.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\GlyphFragmentShader.glsl" />
+    <None Include="Source\Shaders\GlyphVertexShader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
