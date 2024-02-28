@@ -1,6 +1,6 @@
 /* ======================== FILE PURPOSE ========================
 *
-*  This file is used to define the vertex shader for the triangle.
+*  This file is used to define the vertex shader for 2D objects.
 *  The vertex shader is responsible for transforming the vertices
 *  of the triangle from model space to clip space.
 * 

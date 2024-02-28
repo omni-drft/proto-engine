@@ -69,7 +69,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	glEnable(GL_DEPTH_TEST);
 
 	// setting the window to not be resizable
-	//glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
 	// Create a windowed mode window and its OpenGL context
 	#pragma warning(disable 6011)
