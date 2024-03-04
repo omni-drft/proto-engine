@@ -14,6 +14,7 @@
 #include <iostream>
 
 #include "Window.hpp"
+#include "Log.hpp"
 
 /// <summary>
 /// General purpose namespace for the engine

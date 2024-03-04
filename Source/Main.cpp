@@ -28,35 +28,22 @@
 #include "Window.hpp"
 #include "Object.hpp"
 #include "Vertex.hpp"
-#include "Text.hpp"
-#include "Character.hpp"
+#include "Log.hpp"
 
 int main()
 {
-
-
-	// ======================== FIRST OBJECT DATA - ONLY TEMPORARY ========================
-	// Define the vertices of a rectangle
-	std::vector<ProtoEngine::Vertex> vertices{
-		{100.0f, 100.0f},   // bottom-left
-		{600.0f, 100.0f},   // bottom-right
-		{600.0f, 600.0f},   // top-right
-		{100.0f, 600.0f}   // top-left
-	};
-
-	// Define the indices to form two triangles (making a rectangle)
-	std::vector<int> indices {
-			0, 1, 2,  // first triangle
-			2, 3, 0   // second triangle
-	};
-	// ====================================================================================
-		
-
+	// Create a logger
+	ProtoEngine::Log::Init();
+	ProtoEngine::Log::GetLogger()->info("Logger initialized");
+	ProtoEngine::Log::GetLogger()->info("ProtoEngine starting...");
 
 	// Close the console window if in release mode
 	#ifdef NDEBUG
 	FreeConsole();
 	#endif // NDEBUG
+
+	// Creating a logger (will be moved to a separate file later)
+
 
 	// Create a window
 	ProtoEngine::Window window(1600, 800, "ProtoEngine");
@@ -75,12 +62,8 @@ int main()
 	objectShader.SetVec4("objectColor", 1.0f, 0.5f, 0.2f, 1.0f);
 
 	// Create shader for text rendering
-	ProtoEngine::Shader textShader("Source/Shaders/GlyphVertexShader.glsl", "Source/Shaders/GlyphFragmentShader.glsl");
-	textShader.SetMat4("projection", projection);
 	
-	ProtoEngine::Object rectangle(vertices, indices);
-
-	ProtoEngine::Text text("Hello there!");
+	//ProtoEngine::Object rectangle(vertices, indices);
 
 	// Loop until the user closes the window
 	while (!glfwWindowShouldClose(window.GetWindow()))
@@ -95,9 +78,6 @@ int main()
 		// Draw the object
 		//objectShader.Use();
 		//rectangle.Draw();
-
-		// Draw the text
-		text.Render(textShader, 100.0f, 100.0f, 5.0f, glm::vec3(1.0f, 1.0f, 1.0f));
 
 		// Swap front and back buffers
 		window.SwapBuffers();

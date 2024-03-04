@@ -9,7 +9,6 @@
 ProtoEngine::HandleInput::HandleInput(ProtoEngine::Window* window)
 	: inputWindow(window)
 {
-
 	// Set the key callback function
 	glfwSetKeyCallback(inputWindow->GetWindow(), KeyCallback);
 
@@ -40,7 +39,7 @@ void ProtoEngine::HandleInput::CursorPositionCallback(GLFWwindow* window, double
 
 	#if INPUT_DEBUG
 	// Print the current cursor position whenever the cursor moves
-	std::cout << "X: " << xpos << " Y: " << ypos << std::endl;
+	Log::GetLogger()->trace("Cursor Position: X: {0}, Y: {1}", xpos, ypos);
 	#endif 
 
 }
@@ -51,25 +50,25 @@ void ProtoEngine::HandleInput::MouseButtonCallback(GLFWwindow* window, int butto
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
 	{
 
-	#ifdef INPUT_DEBUG
-		std::cout << "Left mouse button pressed" << std::endl;
-	#endif
+		#ifdef INPUT_DEBUG
+		Log::GetLogger()->trace("Left mouse button pressed");
+		#endif
 
 	}
 	if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
 	{
 
-	#ifdef INPUT_DEBUG
-		std::cout << "Right mouse button pressed" << std::endl;
-	#endif 
+		#ifdef INPUT_DEBUG
+		Log::GetLogger()->trace("Right mouse button pressed");
+		#endif 
 
 	}
 	if (button == GLFW_MOUSE_BUTTON_MIDDLE && action == GLFW_PRESS)
 	{
 
-	#ifdef INPUT_DEBUG
-		std::cout << "Middle mouse button pressed" << std::endl;
-	#endif
+		#ifdef INPUT_DEBUG
+		Log::GetLogger()->trace("Middle mouse button pressed");
+		#endif
 
 	}
 }
@@ -77,19 +76,19 @@ void ProtoEngine::HandleInput::MouseButtonCallback(GLFWwindow* window, int butto
 void ProtoEngine::HandleInput::ScrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 {
 
-#ifdef INPUT_DEBUG
+	#ifdef INPUT_DEBUG
 	// Print the scroll offset whenever the mouse wheel is scrolled
-	std::cout << "X Offset: " << xoffset << " Y Offset: " << yoffset << std::endl;
-#endif
+	Log::GetLogger()->trace("Scroll Offset: X: {0}, Y: {1}", xoffset, yoffset);
+	#endif
 
 }
 
 void ProtoEngine::HandleInput::CharacterCallback(GLFWwindow* window, unsigned int codepoint)
 {
 
-#ifdef INPUT_DEBUG
+	#ifdef INPUT_DEBUG
 	// Print the character whenever a key is pressed
-	std::cout << "Character: " << codepoint << std::endl;
-#endif
+	Log::GetLogger()->trace("Character: {0}", codepoint);
+	#endif
 
 }

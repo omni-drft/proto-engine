@@ -18,7 +18,7 @@
 #include <string>
 #include <map>
 
-#include "Character.hpp"
+#include "Log.hpp"
 
 namespace ProtoEngine
 {
@@ -98,16 +98,6 @@ namespace ProtoEngine
 		/// GLFW window pointer
 		/// </summary>
 		GLFWwindow* window;
-
-		/// <summary>
-		/// FreeType library
-		/// </summary>
-		FT_Library ft;
-
-		/// <summary>
-		/// FreeType face
-		/// </summary>
-		FT_Face face;
 
 		/// <summary>
 		/// Frame buffer size callback function

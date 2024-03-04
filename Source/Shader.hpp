@@ -25,6 +25,8 @@
 #include <string>
 #include <sstream>
 
+#include "Log.hpp"
+
 namespace ProtoEngine
 {
 
