@@ -6,29 +6,7 @@
 * 
 ================================================================== */
 
-// Link OpenGL Extension Wrangler
-#include <GL/glew.h>
-
-// Link GLFW for window creation and input handling
-#include <GLFW/glfw3.h>
-
-// Link GLM for algebra
-#include <glm/glm.hpp>
-
-#include <spdlog/spdlog.h>
-
-// Link standard libraries
-#include <iostream>
-#include <Windows.h>
-#include <vector>
-
-// Link custom classes
-#include "HandleInput.hpp"
-#include "Shader.hpp"
-#include "Window.hpp"
-#include "Object.hpp"
-#include "Vertex.hpp"
-#include "Log.hpp"
+#include "Includes.hpp"
 
 int main()
 {

@@ -1,22 +1,20 @@
-﻿  Window.cpp
-F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(490,51): warning C4996: 'stdext::checked_array_iterator<T*>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
-  (compiling source file 'Source/Window.cpp')
-  C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
-  see declaration of 'stdext::checked_array_iterator'
-  
+﻿  Main.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   F:\dev\C++\openGL\ProtoEngine\Dependencies\GLFW\include\GLFW\glfw3.h(123,1):
   see previous definition of 'APIENTRY'
   
-F:\dev\C++\openGL\ProtoEngine\Source\Window.cpp(71,26): warning C4081: expected ':'; found 'constant'
-F:\dev\C++\openGL\ProtoEngine\Source\Window.cpp(73,26): warning C4081: expected ':'; found 'constant'
+F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(490,51): warning C4996: 'stdext::checked_array_iterator<T*>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
+  (compiling source file 'Source/Main.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
+  see declaration of 'stdext::checked_array_iterator'
+  
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996: 'stdext::checked_array_iterator<T *>::checked_array_iterator': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         with
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         [
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:             T=fmt::v9::detail::bigint::bigit
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3):
   the template instantiation context (the oldest one first) is
   	F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(2807,34):
@@ -31,7 +29,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31):
@@ -64,14 +62,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40):
@@ -100,14 +98,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -116,14 +114,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -132,14 +130,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -148,14 +146,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -164,28 +162,28 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996: 'stdext::checked_array_iterator<T *>::_Verify_offset': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996: 'stdext::checked_array_iterator<T *>::_Unwrapped': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996: 'stdext::checked_array_iterator<T *>::checked_array_iterator': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         with
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         [
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:             T=char
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3):
   the template instantiation context (the oldest one first) is
   	F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\common.h(347,34):
@@ -208,7 +206,7 @@ F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\cor
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\core.h(842,24): warning C4996:         [
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\core.h(842,24): warning C4996:             T=char
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\core.h(842,24): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\core.h(842,24):
   the template instantiation context (the oldest one first) is
   	F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(855,15):
@@ -225,7 +223,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31):
@@ -262,14 +260,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40):
@@ -298,14 +296,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -314,14 +312,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -330,14 +328,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -346,14 +344,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -362,28 +360,28 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996: 'stdext::checked_array_iterator<T *>::_Verify_offset': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996: 'stdext::checked_array_iterator<T *>::_Unwrapped': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996: 'stdext::checked_array_iterator<T *>::checked_array_iterator': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         with
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         [
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:             T=wchar_t
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3):
   the template instantiation context (the oldest one first) is
   	F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(1276,32):
@@ -402,7 +400,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31):
@@ -435,14 +433,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40):
@@ -471,14 +469,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -487,14 +485,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -503,14 +501,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -519,14 +517,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -535,28 +533,28 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996: 'stdext::checked_array_iterator<T *>::_Verify_offset': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996: 'stdext::checked_array_iterator<T *>::_Unwrapped': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:             T=wchar_t
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996: 'stdext::checked_array_iterator<T *>::_Seek_to': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:             T=fmt::v9::detail::bigint::bigit
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12):
   the template instantiation context (the oldest one first) is
   	F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(2807,10):
@@ -581,7 +579,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:             T=char
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12):
   the template instantiation context (the oldest one first) is
   	F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(925,8):
@@ -606,7 +604,7 @@ F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\for
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         [
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:             T=int
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3):
   the template instantiation context (the oldest one first) is
   	F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format-inl.h(1472,11):
@@ -682,7 +680,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,31):
@@ -715,14 +713,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1151,22): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,40):
@@ -751,14 +749,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(494,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -767,14 +765,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(495,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -783,14 +781,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(496,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -799,14 +797,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(497,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996: 'stdext::checked_array_iterator<T *>': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,40): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
@@ -815,28 +813,28 @@ C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.335
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp(498,31): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996: 'stdext::checked_array_iterator<T *>::_Verify_offset': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1265,12): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996: 'stdext::checked_array_iterator<T *>::_Unwrapped': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1266,41): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996: 'stdext::checked_array_iterator<T *>::_Seek_to': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:         with
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:         [
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:             T=int
 C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12): warning C4996:         ]
-  (compiling source file 'Source/Window.cpp')
+  (compiling source file 'Source/Main.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xutility(1287,12):
   the template instantiation context (the oldest one first) is
   	F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(925,8):

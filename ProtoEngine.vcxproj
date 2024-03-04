@@ -621,6 +621,7 @@
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\stopwatch.h" />
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\tweakme.h" />
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\version.h" />
+    <ClInclude Include="Source\Includes.hpp" />
     <ClInclude Include="Source\Log.hpp" />
     <ClInclude Include="Source\HandleInput.hpp" />
     <ClInclude Include="Source\Object.hpp" />

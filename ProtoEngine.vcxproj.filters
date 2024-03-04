@@ -1437,9 +1437,6 @@
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\version.h">
       <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Character.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="Source\HandleInput.hpp">
       <Filter>Source</Filter>
     </ClInclude>
@@ -1449,22 +1446,20 @@
     <ClInclude Include="Source\Shader.hpp">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Text.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Vertex.hpp">
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\Window.hpp">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Log.hpp" />
+    <ClInclude Include="Source\Includes.hpp">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp">
       <Filter>Dependencies\GLM\glm\detail</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Character.cpp">
-      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\HandleInput.cpp">
       <Filter>Source</Filter>
@@ -1478,11 +1473,9 @@
     <ClCompile Include="Source\Shader.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Text.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Window.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Log.cpp" />
   </ItemGroup>
 </Project>
