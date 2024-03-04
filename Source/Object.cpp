@@ -7,7 +7,7 @@
 ======================================================================================= */
 
 
-#include "Object.h"
+#include "Object.hpp"
 
 ProtoEngine::Object::Object(std::vector<Vertex>& vertices, std::vector<int>& indices)
 	: vertices(vertices), indices(indices)

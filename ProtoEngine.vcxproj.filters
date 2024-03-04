@@ -55,6 +55,33 @@
     <Filter Include="Dependencies\GLM\glm\simd">
       <UniqueIdentifier>{C6BB674F-327E-9BD9-7B2E-2A66E72F74B7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Dependencies\SPDLOG">
+      <UniqueIdentifier>{6443AA0E-D0A4-871C-5912-CECEC572BEDB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SPDLOG\include">
+      <UniqueIdentifier>{D78E6625-439C-940B-CC82-90F6388F60C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SPDLOG\include\spdlog">
+      <UniqueIdentifier>{2F675A7C-1BA3-5DE6-84B5-75DD70100601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SPDLOG\include\spdlog\contrib">
+      <UniqueIdentifier>{2F6E7ADA-1BD6-40A8-8441-55BE70C85794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SPDLOG\include\spdlog\contrib\sinks">
+      <UniqueIdentifier>{E602056C-D2AB-6C9B-FB41-881AE74987DC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SPDLOG\include\spdlog\details">
+      <UniqueIdentifier>{A4168310-907E-49DE-F9E9-5DF4E57060CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SPDLOG\include\spdlog\fmt">
+      <UniqueIdentifier>{E5ECA364-D13E-7B54-BA5D-B864A64E943D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled">
+      <UniqueIdentifier>{D220ED33-BE9E-3DCD-A796-FB6493B37FF5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SPDLOG\include\spdlog\sinks">
+      <UniqueIdentifier>{E6BB3B1E-D238-2F61-FBB5-2F75E791CBF4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{56EB95D1-428D-C0A7-2B48-D4FB178947F8}</UniqueIdentifier>
     </Filter>
@@ -1104,29 +1131,148 @@
     <ClInclude Include="Dependencies\GLM\glm\vector_relational.hpp">
       <Filter>Dependencies\GLM\glm</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Character.h">
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\async_logger.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\common.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\contrib\sinks\step_file_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\contrib\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\async_log_helper.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\async_logger_impl.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\file_helper.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\log_msg.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\logger_impl.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\mpmc_blocking_q.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\null_mutex.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\os.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\pattern_formatter_impl.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\registry.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\spdlog_impl.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\details</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\fmt\bundled</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\ostream.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\fmt\bundled</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\posix.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\fmt\bundled</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\printf.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\fmt\bundled</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\time.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\fmt\bundled</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\fmt.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\ostr.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\formatter.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\logger.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\android_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\ansicolor_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\base_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\dist_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\file_sinks.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\msvc_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\null_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\ostream_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\stdout_sinks.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\syslog_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\wincolor_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\windebug_sink.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog\sinks</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\spdlog.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\tweakme.h">
+      <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Character.hpp">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\HandleInput.h">
+    <ClInclude Include="Source\HandleInput.hpp">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Object.h">
+    <ClInclude Include="Source\Object.hpp">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Shader.h">
+    <ClInclude Include="Source\Shader.hpp">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Vertex.h">
+    <ClInclude Include="Source\Text.hpp">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Window.h">
+    <ClInclude Include="Source\Vertex.hpp">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Text.h" />
+    <ClInclude Include="Source\Window.hpp">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp">
       <Filter>Dependencies\GLM\glm\detail</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Character.cpp">
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\HandleInput.cpp">
       <Filter>Source</Filter>
@@ -1140,14 +1286,11 @@
     <ClCompile Include="Source\Shader.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Text.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Window.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Text.cpp" />
-    <ClCompile Include="Source\Character.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Source\Shaders\GlyphVertexShader.glsl" />
-    <None Include="Source\Shaders\GlyphFragmentShader.glsl" />
   </ItemGroup>
 </Project>

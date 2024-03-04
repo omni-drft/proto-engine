@@ -15,7 +15,7 @@
 #include <iostream>
 #include <vector>
 
-#include "Vertex.h"
+#include "Vertex.hpp"
 
 namespace ProtoEngine 
 {

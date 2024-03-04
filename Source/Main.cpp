@@ -15,19 +15,21 @@
 // Link GLM for algebra
 #include <glm/glm.hpp>
 
+#include <spdlog/spdlog.h>
+
 // Link standard libraries
 #include <iostream>
 #include <Windows.h>
 #include <vector>
 
 // Link custom classes
-#include "HandleInput.h"
-#include "Shader.h"
-#include "Window.h"
-#include "Object.h"
-#include "Vertex.h"
-#include "Text.h"
-#include "Character.h"
+#include "HandleInput.hpp"
+#include "Shader.hpp"
+#include "Window.hpp"
+#include "Object.hpp"
+#include "Vertex.hpp"
+#include "Text.hpp"
+#include "Character.hpp"
 
 int main()
 {
@@ -78,7 +80,7 @@ int main()
 	
 	ProtoEngine::Object rectangle(vertices, indices);
 
-	ProtoEngine::Text text("Rudy to cwel!");
+	ProtoEngine::Text text("Hello there!");
 
 	// Loop until the user closes the window
 	while (!glfwWindowShouldClose(window.GetWindow()))

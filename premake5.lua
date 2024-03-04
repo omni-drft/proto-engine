@@ -15,7 +15,11 @@ project "ProtoEngine"
 	objdir "Bin/Intermediates/%{cfg.buildcfg}"
 
 	-- Source files	
-	files { "**.cpp", "**.h", "**.hpp" }
+	files { 
+		"**.cpp", 
+		"**.h", 
+		"**.hpp" 
+	}
 
 	-- Library directories
 	libdirs { 
@@ -37,7 +41,8 @@ project "ProtoEngine"
 		"Dependencies/GLEW/include", 
 		"Dependencies/GLFW/include", 
 		"Dependencies/GLM",
-		"Dependencies/FREETYPE/include"
+		"Dependencies/FREETYPE/include",
+		"Dependencies/SPDLOG/include"
 	}
 
 	-- Default debug release properties
@@ -64,9 +69,3 @@ project "ProtoEngine"
 	filter "platforms:Win64"
 		system "Windows"
 		architecture "x86_64"
-
-		-- This warning occurs because i used precompiled version
-		-- of FreeType. This isn't an issue. I might use building 
-		-- from source in the future, in that case this warning will be removed.
-		-- For now i just ignore this warning because it's annoying.
-		linkoptions { "/IGNORE:4099" }

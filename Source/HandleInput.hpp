@@ -13,7 +13,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-#include "Window.h"
+#include "Window.hpp"
 
 /// <summary>
 /// General purpose namespace for the engine

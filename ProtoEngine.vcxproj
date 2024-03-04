@@ -98,7 +98,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;Dependencies\SPDLOG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -113,7 +113,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'">
@@ -121,7 +120,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;Dependencies\SPDLOG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -132,7 +131,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='InputDebug Win64|x64'">
@@ -140,7 +138,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;INPUT_DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;Dependencies\SPDLOG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -151,7 +149,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ShaderDebug Win64|x64'">
@@ -159,7 +156,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;SHADER_DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;Dependencies\SPDLOG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -170,7 +167,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -522,13 +518,51 @@
     <ClInclude Include="Dependencies\GLM\glm\vec3.hpp" />
     <ClInclude Include="Dependencies\GLM\glm\vec4.hpp" />
     <ClInclude Include="Dependencies\GLM\glm\vector_relational.hpp" />
-    <ClInclude Include="Source\Character.h" />
-    <ClInclude Include="Source\HandleInput.h" />
-    <ClInclude Include="Source\Object.h" />
-    <ClInclude Include="Source\Shader.h" />
-    <ClInclude Include="Source\Vertex.h" />
-    <ClInclude Include="Source\Window.h" />
-    <ClInclude Include="Source\Text.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\async_logger.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\common.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\contrib\sinks\step_file_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\async_log_helper.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\async_logger_impl.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\file_helper.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\log_msg.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\logger_impl.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\mpmc_blocking_q.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\null_mutex.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\os.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\pattern_formatter_impl.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\registry.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\spdlog_impl.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\ostream.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\posix.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\printf.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\time.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\fmt.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\ostr.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\formatter.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\logger.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\android_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\ansicolor_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\base_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\dist_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\file_sinks.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\msvc_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\null_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\ostream_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\stdout_sinks.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\syslog_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\wincolor_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\windebug_sink.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\spdlog.h" />
+    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\tweakme.h" />
+    <ClInclude Include="Source\Character.hpp" />
+    <ClInclude Include="Source\HandleInput.hpp" />
+    <ClInclude Include="Source\Object.hpp" />
+    <ClInclude Include="Source\Shader.hpp" />
+    <ClInclude Include="Source\Text.hpp" />
+    <ClInclude Include="Source\Vertex.hpp" />
+    <ClInclude Include="Source\Window.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp" />
@@ -537,12 +571,8 @@
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\Shader.cpp" />
-    <ClCompile Include="Source\Window.cpp" />
     <ClCompile Include="Source\Text.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Source\Shaders\GlyphFragmentShader.glsl" />
-    <None Include="Source\Shaders\GlyphVertexShader.glsl" />
+    <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

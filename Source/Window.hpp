@@ -18,7 +18,7 @@
 #include <string>
 #include <map>
 
-#include "Character.h"
+#include "Character.hpp"
 
 namespace ProtoEngine
 {

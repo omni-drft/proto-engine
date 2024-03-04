@@ -6,7 +6,7 @@
 * 
 =============================================================================== */
 
-#include "Window.h"
+#include "Window.hpp"
 
 ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windowTitle)
 	: width(windowWidth), height(windowHeight), title(windowTitle), window(nullptr)

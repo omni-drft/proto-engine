@@ -3,8 +3,8 @@
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 
-#include "Shader.h"
-#include "Character.h"
+#include "Shader.hpp"
+#include "Character.hpp"
 
 namespace ProtoEngine
 {
