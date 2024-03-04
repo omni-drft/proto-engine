@@ -12,7 +12,10 @@ int main()
 {
 	// Create a logger
 	ProtoEngine::Log::Init();
+
+	// Log that the logger has been initialized
 	ProtoEngine::Log::GetLogger()->info("Logger initialized");
+	// Log that the engine is starting
 	ProtoEngine::Log::GetLogger()->info("ProtoEngine starting...");
 
 	// Close the console window if in release mode
@@ -20,12 +23,8 @@ int main()
 	FreeConsole();
 	#endif // NDEBUG
 
-	// Creating a logger (will be moved to a separate file later)
-
-
 	// Create a window
 	ProtoEngine::Window window(1600, 800, "ProtoEngine");
-
 
 	// Initialize the input handler
 	ProtoEngine::HandleInput inputHandler(&window);
@@ -39,9 +38,6 @@ int main()
 	objectShader.SetMat4("projection", projection);
 	objectShader.SetVec4("objectColor", 1.0f, 0.5f, 0.2f, 1.0f);
 
-	// Create shader for text rendering
-	
-	//ProtoEngine::Object rectangle(vertices, indices);
 
 	// Loop until the user closes the window
 	while (!glfwWindowShouldClose(window.GetWindow()))
@@ -52,10 +48,6 @@ int main()
 		// Update the window dimensions and viewport
 		glViewport(0, 0, currentWidth, currentHeight);
 		window.GetDimensions(&currentWidth, &currentHeight);
-
-		// Draw the object
-		//objectShader.Use();
-		//rectangle.Draw();
 
 		// Swap front and back buffers
 		window.SwapBuffers();
