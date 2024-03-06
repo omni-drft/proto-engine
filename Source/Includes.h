@@ -25,9 +25,9 @@
 #include <map>
 
 // Link custom classes
-#include "HandleInput.hpp"
-#include "Shader.hpp"
-#include "Window.hpp"
-#include "Object.hpp"
-#include "Vertex.hpp"
-#include "Log.hpp"
+#include "HandleInput.h"
+#include "Shader.h"
+#include "Window.h"
+#include "Object.h"
+#include "Vertex.h"
+#include "Log.h"

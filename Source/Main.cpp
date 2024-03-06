@@ -6,7 +6,7 @@
 * 
 ================================================================== */
 
-#include "Includes.hpp"
+#include "Includes.h"
 
 struct Character {
 	unsigned int TextureID;  // ID handle of the glyph texture

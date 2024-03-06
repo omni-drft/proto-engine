@@ -4,7 +4,7 @@
 *
 ==================================================================*/
 
-#include "HandleInput.hpp"
+#include "HandleInput.h"
 
 ProtoEngine::HandleInput::HandleInput(ProtoEngine::Window* window)
 	: inputWindow(window)

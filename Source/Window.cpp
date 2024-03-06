@@ -8,7 +8,7 @@
 
 #define STB_IMAGE_IMPLEMENTATION
 
-#include "Window.hpp"
+#include "Window.h"
 
 ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windowTitle)
 	: width(windowWidth), height(windowHeight), title(windowTitle), window(nullptr)

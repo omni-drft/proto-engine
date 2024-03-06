@@ -4,7 +4,7 @@
 * 
 =========================================================================== */
 
-#include "Shader.hpp"
+#include "Shader.h"
 
 ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 {

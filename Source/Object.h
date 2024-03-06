@@ -15,8 +15,8 @@
 #include <iostream>
 #include <vector>
 
-#include "Vertex.hpp"
-#include "Log.hpp"
+#include "Vertex.h"
+#include "Log.h"
 
 namespace ProtoEngine 
 {

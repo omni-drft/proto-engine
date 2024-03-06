@@ -20,7 +20,7 @@
 #include <string>
 #include <map>
 
-#include "Log.hpp"
+#include "Log.h"
 
 namespace ProtoEngine
 {
