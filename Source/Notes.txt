@@ -1,0 +1,2 @@
+Error meanings and solutions:
+	* OpenGL error 1282: Usually caused by trying to use shader when there is no active context.
