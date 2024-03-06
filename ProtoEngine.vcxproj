@@ -621,9 +621,10 @@
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\stopwatch.h" />
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\tweakme.h" />
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\version.h" />
+    <ClInclude Include="Source\stb_image.h" />
+    <ClInclude Include="Source\HandleInput.hpp" />
     <ClInclude Include="Source\Includes.hpp" />
     <ClInclude Include="Source\Log.hpp" />
-    <ClInclude Include="Source\HandleInput.hpp" />
     <ClInclude Include="Source\Object.hpp" />
     <ClInclude Include="Source\Shader.hpp" />
     <ClInclude Include="Source\Vertex.hpp" />
@@ -631,15 +632,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp" />
-    <ClCompile Include="Source\Log.cpp" />
     <ClCompile Include="Source\HandleInput.cpp" />
+    <ClCompile Include="Source\Log.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\Shader.cpp" />
     <ClCompile Include="Source\Window.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Source\Notes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

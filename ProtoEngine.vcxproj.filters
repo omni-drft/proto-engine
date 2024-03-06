@@ -79,6 +79,9 @@
     <Filter Include="Dependencies\SPDLOG\include\spdlog\sinks">
       <UniqueIdentifier>{E6BB3B1E-D238-2F61-FBB5-2F75E791CBF4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Dependencies\STB_IMAGE">
+      <UniqueIdentifier>{06EC5AEE-F2E5-8340-DB52-1A51C7EBE9AC}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{56EB95D1-428D-C0A7-2B48-D4FB178947F8}</UniqueIdentifier>
     </Filter>
@@ -1437,7 +1440,16 @@
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\version.h">
       <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
     </ClInclude>
+    <ClInclude Include="Dependencies\STB_IMAGE\stb_image.h">
+      <Filter>Dependencies\STB_IMAGE</Filter>
+    </ClInclude>
     <ClInclude Include="Source\HandleInput.hpp">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Includes.hpp">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Log.hpp">
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\Object.hpp">
@@ -1452,16 +1464,15 @@
     <ClInclude Include="Source\Window.hpp">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Log.hpp" />
-    <ClInclude Include="Source\Includes.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp">
       <Filter>Dependencies\GLM\glm\detail</Filter>
     </ClCompile>
     <ClCompile Include="Source\HandleInput.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Log.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Main.cpp">
@@ -1476,11 +1487,5 @@
     <ClCompile Include="Source\Window.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Log.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Source\Notes.txt">
-      <Filter>Source</Filter>
-    </Text>
   </ItemGroup>
 </Project>

@@ -14,6 +14,8 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H  
 
+#include "stb_image.h"
+
 #include <iostream>
 #include <string>
 #include <map>

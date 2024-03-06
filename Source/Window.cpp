@@ -6,6 +6,8 @@
 * 
 =============================================================================== */
 
+#define STB_IMAGE_IMPLEMENTATION
+
 #include "Window.hpp"
 
 ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windowTitle)
@@ -82,10 +84,20 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	// Set the window to full screen
 	//glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, GLFW_DONT_CARE);
 
-
 	// Make the window's context current
 	glfwMakeContextCurrent(window);
 	glfwSetFramebufferSizeCallback(window, FrameBufferSizeCallback);
+
+	int width, height;
+	int channels;
+	unsigned char* data = stbi_load("Assets/Icons/ProtoEngineIcon.png", &width, &height, &channels, 4);
+
+	GLFWimage images[1];
+	images[0].width = width;
+	images[0].height = height;
+	images[0].pixels = data;
+
+	glfwSetWindowIcon(window, 1, images);
 
 
 	// Initialize GLEW
