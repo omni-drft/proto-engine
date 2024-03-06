@@ -50,7 +50,7 @@ int main()
 	}
 	else ProtoEngine::Log::GetLogger()->info("FreeType: Font loaded succesfully");
 
-	FT_Set_Pixel_Sizes(face, 0, 48);
+	FT_Set_Pixel_Sizes(face, 0, 24);
 
 	if (FT_Load_Char(face, 'X', FT_LOAD_RENDER))
 	{
@@ -125,7 +125,7 @@ int main()
 	// Log that the logger has been initialized
 	ProtoEngine::Log::GetLogger()->info("Logger: Initialized");
 	// Log that the engine is starting
-	ProtoEngine::Log::GetLogger()->info("ProtoEngine starting...");
+	ProtoEngine::Log::GetLogger()->info("ProtoEngine: Starting...");
 
 	// Close the console window if in release mode
 	#ifdef NDEBUG
@@ -145,7 +145,7 @@ int main()
 	objectShader.SetMat4("projection", projection);
 	objectShader.SetVec4("objectColor", 1.0f, 0.5f, 0.2f, 1.0f);
 
-
+	ProtoEngine::Log::GetLogger()->info("ProtoEngine: Ready to use");
 	// Loop until the user closes the window
 	while (!glfwWindowShouldClose(window.GetWindow()))
 	{
@@ -157,7 +157,8 @@ int main()
 		window.GetDimensions(&currentWidth, &currentHeight);
 
 		// Render text
-		RenderText(textShader, "ProtoEngine", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f), VAO, VBO);
+
+		RenderText(textShader, "v0.0dev", currentWidth - 105.0f, 10.0f, 1.0f, glm::vec3(0.4f, 0.4f, 0.4f), VAO, VBO);
 
 		// Swap front and back buffers
 		window.SwapBuffers();

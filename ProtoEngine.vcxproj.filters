@@ -1478,4 +1478,9 @@
     </ClCompile>
     <ClCompile Include="Source\Log.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Source\Notes.txt">
+      <Filter>Source</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

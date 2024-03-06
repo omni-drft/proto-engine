@@ -106,7 +106,7 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 void ProtoEngine::Window::ClearWindow()
 {
 	// Set the background color
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(20.0f / 255.0f, 20.0f / 255.0f, 20.0f / 255.0f, 1.0f);
 
 	// Clear the window	
 	glClear(GL_COLOR_BUFFER_BIT);
