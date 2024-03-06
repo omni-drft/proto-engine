@@ -10,7 +10,7 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 {
 	GLenum error = glGetError();
 	if (error != GL_NO_ERROR) {
-		Log::GetLogger()->error("OpenGL error: {}", error);
+		Log::GetLogger()->error("OpenGL: Error: {}", error);
 	}
 
 	// Read shader files
@@ -20,7 +20,7 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 
 	error = glGetError();
 	if (error != GL_NO_ERROR) {
-		Log::GetLogger()->error("OpenGL error: {}", error);
+		Log::GetLogger()->error("OpenGL: Error: {}", error);
 	}
 
 	// Read file contents into string streams
@@ -59,10 +59,10 @@ ProtoEngine::Shader::Shader(const char* vertexPath, const char* fragmentPath)
 	glGetProgramiv(programID, GL_LINK_STATUS, &success);
 	if (!success) {
 		glGetProgramInfoLog(programID, 512, NULL, infoLog);
-		Log::GetLogger()->error("Shader program linking error: {}", infoLog);
+		Log::GetLogger()->error("Shader: Linking error: {}", infoLog);
 	}
 	else
-		Log::GetLogger()->info("Shader program linked successfully");
+		Log::GetLogger()->info("Shader: Linked successfully");
 
 	// Shader info log
 	PrintShaderInfoLog(vertexShader);
@@ -110,10 +110,10 @@ unsigned int ProtoEngine::Shader::CompileShader(unsigned int type, const char* s
 	glGetShaderiv(shaderID, GL_COMPILE_STATUS, &success);
 	if (!success) {
 		glGetShaderInfoLog(shaderID, 512, NULL, infoLog);
-		Log::GetLogger()->error("Shader compilation error: {}", infoLog);
+		Log::GetLogger()->error("Shader: Compilation error: {}", infoLog);
 	}
 	else
-		Log::GetLogger()->info("Shader compiled successfully");
+		Log::GetLogger()->info("Shader: Compiled successfully");
 	return shaderID;
 }
 
@@ -123,7 +123,7 @@ void ProtoEngine::Shader::PrintShaderInfoLog(GLuint shader) {
 	if (maxLength > 0) {
 		char* infoLog{ new char[maxLength] };
 		glGetShaderInfoLog(shader, maxLength, &maxLength, infoLog);
-		Log::GetLogger()->info("Shader info log: {}", infoLog);
+		Log::GetLogger()->info("Shader: Info log: {}", infoLog);
 		delete[] infoLog;
 	}
 }

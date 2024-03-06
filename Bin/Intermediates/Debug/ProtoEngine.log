@@ -9,6 +9,7 @@ F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\for
   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\iterator(1470,35):
   see declaration of 'stdext::checked_array_iterator'
   
+F:\dev\C++\openGL\ProtoEngine\Source\Main.cpp(97,25): warning C4838: conversion from 'FT_Pos' to 'unsigned int' requires a narrowing conversion
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996: 'stdext::checked_array_iterator<T *>::checked_array_iterator': warning STL4043: stdext::checked_array_iterator, stdext::unchecked_array_iterator, and related factory functions are non-Standard extensions and will be removed in the future. std::span (since C++20) and gsl::span can be used instead. You can define _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING or _SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS to suppress this warning.
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         with
 F:\dev\C++\openGL\ProtoEngine\Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h(493,3): warning C4996:         [

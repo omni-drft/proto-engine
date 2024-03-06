@@ -70,6 +70,12 @@ namespace ProtoEngine
 		/// </summary>
 		void SetMat4(std::string name, const glm::mat4& mat);
 
+		/// <summary>
+		/// Property to get the shader program ID
+		/// </summary>
+		/// <returns> Shader program ID </returns>
+		unsigned int GetProgramID() { return programID; }
+
 	private:
 
 		/// <summary>

@@ -14,11 +14,11 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	// Initialize GLFW
 	if (!glfwInit())
 	{
-		Log::GetLogger()->critical("Failed to initialize GLFW");
+		Log::GetLogger()->critical("GLFW: Failed to initialize");
 		return;
 	}
 	else
-		Log::GetLogger()->info("GLFW initialized succesfully");
+		Log::GetLogger()->info("GLFW: Initialized succesfully");
 
 	//// Get the primary monitor, which is necessary to set the window to full screen
 	//GLFWmonitor* primatyMonitor = glfwGetPrimaryMonitor();
@@ -68,18 +68,16 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
 	// Create a windowed mode window and its OpenGL context
-	#pragma warning(disable 6011)
 	window = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
-	#pragma warning(default 6011)
 
 	// Create a windowed mode window and its OpenGL context
 	if (!window)
 	{ 
-		Log::GetLogger()->critical("Failed to create window");
+		Log::GetLogger()->critical("Window: Failed to create");
 		return;
 	}
 	else
-		Log::GetLogger()->info("Window created succesfully");
+		Log::GetLogger()->info("Window: Created succesfully");
 
 	// Set the window to full screen
 	//glfwSetWindowMonitor(window, glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, GLFW_DONT_CARE);
@@ -93,16 +91,16 @@ ProtoEngine::Window::Window(int windowWidth, int windowHeight, const char* windo
 	// Initialize GLEW
 	if (glewInit() != GLEW_OK)
 	{
-		Log::GetLogger()->critical("Failed to initialize GLEW");
+		Log::GetLogger()->critical("GLEW: Failed to initialize");
 		glfwTerminate();
 		return;
 	}
 	else
 	{
-		Log::GetLogger()->info("GLEW initialized succesfully");
+		Log::GetLogger()->info("GLEW: Initialized succesfully");
 	}
 	std::string glVersion{ reinterpret_cast<const char*>(glGetString(GL_VERSION)) };	
-	Log::GetLogger()->info("OpenGL version: {0}", glVersion);
+	Log::GetLogger()->info("OpenGL: Version: {0}", glVersion);
 }
 
 void ProtoEngine::Window::ClearWindow()

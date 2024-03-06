@@ -15,10 +15,14 @@
 // Link GLM for algebra
 #include <glm/glm.hpp>
 
+//#include <ft2build.h>
+//#include FT_FREETYPE_H
+
 // Link standard libraries
 #include <iostream>
 #include <Windows.h>
 #include <vector>
+#include <map>
 
 // Link custom classes
 #include "HandleInput.hpp"
