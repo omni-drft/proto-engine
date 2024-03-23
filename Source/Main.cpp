@@ -23,6 +23,10 @@ int main()
 {
 	// Create a logger
 	ProtoEngine::Log::Init();
+
+	// Log that the logger has been initialized
+	ProtoEngine::Log::GetLogger()->info("Logger: Initialized");
+
 	// Create a window
 	ProtoEngine::Window window(1600, 800, "ProtoEngine");
 	glEnable(GL_BLEND);
@@ -122,8 +126,6 @@ int main()
 
 
 
-	// Log that the logger has been initialized
-	ProtoEngine::Log::GetLogger()->info("Logger: Initialized");
 	// Log that the engine is starting
 	ProtoEngine::Log::GetLogger()->info("ProtoEngine: Starting...");
 

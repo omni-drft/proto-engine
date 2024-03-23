@@ -622,13 +622,13 @@
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\tweakme.h" />
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\version.h" />
     <ClInclude Include="Source\stb_image.h" />
-    <ClInclude Include="Source\HandleInput.hpp" />
-    <ClInclude Include="Source\Includes.hpp" />
-    <ClInclude Include="Source\Log.hpp" />
-    <ClInclude Include="Source\Object.hpp" />
-    <ClInclude Include="Source\Shader.hpp" />
-    <ClInclude Include="Source\Vertex.hpp" />
-    <ClInclude Include="Source\Window.hpp" />
+    <ClInclude Include="Source\HandleInput.h" />
+    <ClInclude Include="Source\Includes.h" />
+    <ClInclude Include="Source\Log.h" />
+    <ClInclude Include="Source\Object.h" />
+    <ClInclude Include="Source\Shader.h" />
+    <ClInclude Include="Source\Vertex.h" />
+    <ClInclude Include="Source\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp" />

@@ -1440,30 +1440,14 @@
     <ClInclude Include="Dependencies\SPDLOG\include\spdlog\version.h">
       <Filter>Dependencies\SPDLOG\include\spdlog</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\STB_IMAGE\stb_image.h">
-      <Filter>Dependencies\STB_IMAGE</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\HandleInput.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Includes.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Log.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Object.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Shader.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Vertex.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Window.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
+    <ClInclude Include="Source\stb_image.h" />
+    <ClInclude Include="Source\HandleInput.h" />
+    <ClInclude Include="Source\Includes.h" />
+    <ClInclude Include="Source\Log.h" />
+    <ClInclude Include="Source\Object.h" />
+    <ClInclude Include="Source\Shader.h" />
+    <ClInclude Include="Source\Vertex.h" />
+    <ClInclude Include="Source\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp">
