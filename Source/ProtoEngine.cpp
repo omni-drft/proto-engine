@@ -1,3 +1,5 @@
+#include "ProtoEngine.hpp"
+
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -8,8 +10,8 @@
 
 #include <iostream>
 
-
-int main() {
+__declspec(dllexport) void engineInit()
+{
     glfwInit();
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
@@ -31,6 +33,4 @@ int main() {
     glfwDestroyWindow(window);
 
     glfwTerminate();
-
-    return 0;
 }

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProtoEngine", "ProtoEngine.vcxproj", "{0F9D55FE-7B52-CEF3-0447-C8CA70FBC4F7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGame", "TestGame.vcxproj", "{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,14 @@ Global
 		{0F9D55FE-7B52-CEF3-0447-C8CA70FBC4F7}.Release|Win32.Build.0 = Release|Win32
 		{0F9D55FE-7B52-CEF3-0447-C8CA70FBC4F7}.Release|Win64.ActiveCfg = Release Win64|x64
 		{0F9D55FE-7B52-CEF3-0447-C8CA70FBC4F7}.Release|Win64.Build.0 = Release Win64|x64
+		{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}.Debug|Win32.Build.0 = Debug|Win32
+		{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}.Debug|Win64.ActiveCfg = Debug Win64|x64
+		{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}.Debug|Win64.Build.0 = Debug Win64|x64
+		{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}.Release|Win32.ActiveCfg = Release|Win32
+		{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}.Release|Win32.Build.0 = Release|Win32
+		{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}.Release|Win64.ActiveCfg = Release Win64|x64
+		{BF10A474-ABDD-FE7F-D4F6-EC27C022340E}.Release|Win64.Build.0 = Release Win64|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
