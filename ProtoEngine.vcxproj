@@ -5,17 +5,33 @@
       <Configuration>Release Win64</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Win64|Win32">
+      <Configuration>Release Win64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug Win64|x64">
       <Configuration>Debug Win64</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="InputDebug Win64|x64">
-      <Configuration>InputDebug Win64</Configuration>
+    <ProjectConfiguration Include="Debug Win64|Win32">
+      <Configuration>Debug Win64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="ShaderDebug Win64|x64">
-      <Configuration>ShaderDebug Win64</Configuration>
-      <Platform>x64</Platform>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -26,25 +42,25 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win64|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='InputDebug Win64|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ShaderDebug Win64|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
@@ -55,180 +71,133 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release Win64|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='InputDebug Win64|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ShaderDebug Win64|x64'">
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win64|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>Bin\Release\</OutDir>
-    <IntDir>Bin\Intermediates\Release\</IntDir>
+    <IntDir>Bin\Intermediates\Release\Win64\</IntDir>
     <TargetName>ProtoEngine</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>Bin\Release\</OutDir>
+    <IntDir>Bin\Intermediates\Release\Win32\</IntDir>
+    <TargetName>ProtoEngine</TargetName>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>Bin\Debug\</OutDir>
-    <IntDir>Bin\Intermediates\Debug\</IntDir>
+    <IntDir>Bin\Intermediates\Debug\Win64\</IntDir>
     <TargetName>ProtoEngine</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='InputDebug Win64|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>Bin\InputDebug\</OutDir>
-    <IntDir>Bin\Intermediates\InputDebug\</IntDir>
+    <OutDir>Bin\Debug\</OutDir>
+    <IntDir>Bin\Intermediates\Debug\Win32\</IntDir>
     <TargetName>ProtoEngine</TargetName>
-    <TargetExt>.exe</TargetExt>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ShaderDebug Win64|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>Bin\ShaderDebug\</OutDir>
-    <IntDir>Bin\Intermediates\ShaderDebug\</IntDir>
-    <TargetName>ProtoEngine</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win64|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>NDEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;Dependencies\SPDLOG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\GLM;C:\VulkanSDK\1.3.280.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Dependencies\GLFW\lib-vc2022;C:\VulkanSDK\1.3.280.0\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>Bin\Release\ProtoEngine.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\GLM;C:\VulkanSDK\1.3.280.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glfw3.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Dependencies\GLFW\lib-vc2022;C:\VulkanSDK\1.3.280.0\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>Bin\Release\ProtoEngine.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;Dependencies\SPDLOG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\GLM;C:\VulkanSDK\1.3.280.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Dependencies\GLFW\lib-vc2022;C:\VulkanSDK\1.3.280.0\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>Bin\Debug\ProtoEngine.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='InputDebug Win64|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DEBUG;INPUT_DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;Dependencies\SPDLOG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\GLM;C:\VulkanSDK\1.3.280.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ShaderDebug Win64|x64'">
-    <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DEBUG;SHADER_DEBUG;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLEW\include;Dependencies\GLFW\include;Dependencies\GLM;Dependencies\FREETYPE\include;Dependencies\SPDLOG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <Optimization>Disabled</Optimization>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <ExternalWarningLevel>Level3</ExternalWarningLevel>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Dependencies\GLEW\lib\Release\x64;Dependencies\GLFW\lib-vc2022;Dependencies\FREETYPE\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Dependencies\GLFW\lib-vc2022;C:\VulkanSDK\1.3.280.0\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>Bin\Debug\ProtoEngine.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftconfig.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftheader.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftmodule.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftoption.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\ftstdlib.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\integer-types.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\mac-support.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\config\public-macros.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\freetype.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftadvanc.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftbbox.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftbdf.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftbitmap.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftbzip2.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftcache.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftchapters.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftcid.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftcolor.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftdriver.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\fterrdef.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\fterrors.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftfntfmt.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftgasp.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftglyph.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftgxval.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftgzip.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftimage.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftincrem.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftlcdfil.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftlist.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftlogging.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftlzw.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftmac.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftmm.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftmodapi.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftmoderr.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftotval.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftoutln.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftparams.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftpfr.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftrender.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftsizes.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftsnames.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftstroke.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftsynth.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftsystem.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\fttrigon.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\fttypes.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ftwinfnt.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\otsvg.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\t1tables.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\ttnameid.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\tttables.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\freetype\tttags.h" />
-    <ClInclude Include="Dependencies\FREETYPE\include\ft2build.h" />
-    <ClInclude Include="Dependencies\GLEW\include\GL\eglew.h" />
-    <ClInclude Include="Dependencies\GLEW\include\GL\glew.h" />
-    <ClInclude Include="Dependencies\GLEW\include\GL\glxew.h" />
-    <ClInclude Include="Dependencies\GLEW\include\GL\wglew.h" />
     <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3.h" />
     <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3native.h" />
     <ClInclude Include="Dependencies\GLM\glm\common.hpp" />
@@ -518,126 +487,10 @@
     <ClInclude Include="Dependencies\GLM\glm\vec3.hpp" />
     <ClInclude Include="Dependencies\GLM\glm\vec4.hpp" />
     <ClInclude Include="Dependencies\GLM\glm\vector_relational.hpp" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\async.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\async_logger-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\async_logger.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\cfg\argv.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\cfg\env.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\cfg\helpers-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\cfg\helpers.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\common-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\common.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\backtracer-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\backtracer.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\circular_q.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\console_globals.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\file_helper-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\file_helper.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\fmt_helper.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\log_msg-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\log_msg.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\log_msg_buffer-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\log_msg_buffer.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\mpmc_blocking_q.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\null_mutex.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\os-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\os.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\periodic_worker-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\periodic_worker.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\registry-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\registry.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\synchronous_factory.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\tcp_client-windows.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\tcp_client.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\thread_pool-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\thread_pool.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\udp_client-windows.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\udp_client.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\details\windows_include.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bin_to_hex.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\args.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\chrono.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\color.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\compile.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\core.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\format-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\format.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\locale.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\os.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\ostream.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\printf.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\ranges.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\std.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\bundled\xchar.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\chrono.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\compile.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\fmt.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\ostr.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\ranges.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\std.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fmt\xchar.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\formatter.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\fwd.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\logger-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\logger.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\pattern_formatter-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\pattern_formatter.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\android_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\ansicolor_sink-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\ansicolor_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\base_sink-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\base_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\basic_file_sink-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\basic_file_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\callback_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\daily_file_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\dist_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\dup_filter_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\hourly_file_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\kafka_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\mongo_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\msvc_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\null_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\ostream_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\qt_sinks.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\ringbuffer_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\rotating_file_sink-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\rotating_file_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\sink-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\stdout_color_sinks-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\stdout_color_sinks.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\stdout_sinks-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\stdout_sinks.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\syslog_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\systemd_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\tcp_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\udp_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\win_eventlog_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\wincolor_sink-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\sinks\wincolor_sink.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\spdlog-inl.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\spdlog.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\stopwatch.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\tweakme.h" />
-    <ClInclude Include="Dependencies\SPDLOG\include\spdlog\version.h" />
-    <ClInclude Include="Source\stb_image.h" />
-    <ClInclude Include="Source\HandleInput.h" />
-    <ClInclude Include="Source\Includes.h" />
-    <ClInclude Include="Source\Log.h" />
-    <ClInclude Include="Source\Object.h" />
-    <ClInclude Include="Source\Shader.h" />
-    <ClInclude Include="Source\Vertex.h" />
-    <ClInclude Include="Source\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp" />
-    <ClCompile Include="Source\HandleInput.cpp" />
-    <ClCompile Include="Source\Log.cpp" />
     <ClCompile Include="Source\Main.cpp" />
-    <ClCompile Include="Source\Object.cpp" />
-    <ClCompile Include="Source\Shader.cpp" />
-    <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

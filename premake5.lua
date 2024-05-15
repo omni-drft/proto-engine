@@ -1,12 +1,12 @@
 workspace "ProtoEngine"
 	-- Releases
-	configurations { "Release", "Debug", "InputDebug", "ShaderDebug" }
+	configurations { "Release", "Debug" }
 	-- Platforms
-	platforms { "Win64" }
+	platforms { "Win64", "Win32" }
 
 -- Project ProtoEngine
 project "ProtoEngine"
-	kind "ConsoleApp"
+	kind "SharedLib"
 	-- Language setup
 	language "C++"
 	cppdialect "C++17"
@@ -23,49 +23,41 @@ project "ProtoEngine"
 
 	-- Library directories
 	libdirs { 
-		"Dependencies/GLEW/lib/Release/x64/", 
 		"Dependencies/GLFW/lib-vc2022/",
-		"Dependencies/FREETYPE/lib"
+		"C:/VulkanSDK/1.3.280.0/Lib"
 	}
 
 	-- Libraries
 	links { 
-		"glew32s.lib", 
 		"glfw3.lib", 
-		"opengl32",
-		"freetype.lib"
+		"vulkan-1.lib"
 	}
 
 	-- Include directories
 	includedirs {
-		"Dependencies/GLEW/include", 
 		"Dependencies/GLFW/include", 
 		"Dependencies/GLM",
-		"Dependencies/FREETYPE/include",
-		"Dependencies/SPDLOG/include"
+		"C:/VulkanSDK/1.3.280.0/Include"
 	}
 
 	-- Default debug release properties
 	filter "configurations:Debug"
-		defines { "DEBUG", "GLEW_STATIC" }
+		defines { "DEBUG" }
 		symbols "On"
+		runtime "Debug"
 
-	-- Input debug properties
-	filter "configurations:InputDebug"
-		defines { "DEBUG", "INPUT_DEBUG", "GLEW_STATIC" }
-		symbols "On"
-
-	-- Shader debug properties
-	filter "configurations:ShaderDebug"
-		defines { "DEBUG", "SHADER_DEBUG", "GLEW_STATIC" }
-		symbols "On"
-	
 	-- Release properties
 	filter "configurations:Release"
-		defines { "NDEBUG", "GLEW_STATIC" }
+		defines { "NDEBUG" }
 		optimize "On"
+		runtime "Release"
 
-	-- Windows platform properties
+	-- Win64 platform properties
 	filter "platforms:Win64"
 		system "Windows"
 		architecture "x86_64"
+
+	-- Win32 platform properties
+	filter "platforms:Win32"
+		system "Windows"
+		architecture "x86"
