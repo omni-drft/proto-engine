@@ -1,8 +1,8 @@
 workspace "ProtoEngine"
 	-- Releases
-	configurations { "Release", "Debug" }
+	configurations { "ReleaseAlone", "DebugAlone", "ReleaseWithGame", "DebugWithGame" }
 	-- Platforms
-	platforms { "Win64", "Win32" }
+	platforms { "Win64" }
 
 -- Project ProtoEngine
 project "ProtoEngine"
@@ -10,10 +10,6 @@ project "ProtoEngine"
 	-- Language setup
 	language "C++"
 	cppdialect "C++17"
-	-- Output directories
-	targetdir "Bin/%{cfg.buildcfg}"
-
-	objdir "Bin/Intermediates/%{cfg.buildcfg}"
 
 
 	-- Source files	
@@ -41,27 +37,43 @@ project "ProtoEngine"
 		"Include"
 	}
 
-	-- Default debug release properties
-	filter "configurations:Debug"
+	-- Debug alone properties
+	filter "configurations:DebugAlone"
 		defines { "DEBUG" }
 		symbols "On"
+		targetdir "Bin/%{cfg.buildcfg}"
+		objdir "Bin/Intermediates/%{cfg.buildcfg}"
 		runtime "Debug"
 
-	-- Release properties
-	filter "configurations:Release"
+	-- Release Alone properties
+	filter "configurations:ReleaseAlone"
 		defines { "NDEBUG" }
 		optimize "On"
+		targetdir "Bin/%{cfg.buildcfg}"
+		objdir "Bin/Intermediates/%{cfg.buildcfg}"
 		runtime "Release"
+
+	-- Release With Game properties
+	filter "configurations:ReleaseWithGame"
+		defines { "NDEBUG" }
+		optimize "On"
+		targetdir "TestBin/Release"
+		objdir "TestBin/Intermediates/Release"
+		runtime "Release"
+	
+	-- Debug With Game properties
+	filter "configurations:DebugWithGame"
+		defines { "DEBUG" }
+		symbols "On"
+		targetdir "TestBin/Debug"
+		objdir "TestBin/Intermediates/Debug"
+		runtime "Debug"
 
 	-- Win64 platform properties
 	filter "platforms:Win64"
 		system "Windows"
 		architecture "x86_64"
 
-	-- Win32 platform properties
-	filter "platforms:Win32"
-		system "Windows"
-		architecture "x86"
 
 -- Project TestGame
 project "TestGame"
@@ -70,10 +82,6 @@ project "TestGame"
 	-- Language setup
 	language "C++"
 	cppdialect "C++17"
-
-	-- Output directories
-	targetdir "TestBin/%{cfg.buildcfg}"
-	objdir "TestBin/Intermediates/%{cfg.buildcfg}"
 
 	-- Source files	
 	files { 
@@ -87,13 +95,19 @@ project "TestGame"
 	includedirs "Include"
 
 	-- Default debug release properties
-	filter "configurations:Debug"
+	filter "configurations:DebugWithGame"
+		-- Output directories
+		targetdir "TestBin/Debug"
+		objdir "TestBin/Intermediates/Debug"
 		defines { "DEBUG" }
 		symbols "On"
 		runtime "Debug"
 
 	-- Release properties
-	filter "configurations:Release"
+	filter "configurations:ReleaseWithGame"
+		-- Output directories
+		targetdir "TestBin/Release"
+		objdir "TestBin/Intermediates/Release"
 		defines { "NDEBUG" }
 		optimize "On"
 		runtime "Release"
@@ -102,12 +116,6 @@ project "TestGame"
 	filter "platforms:Win64"
 		system "Windows"
 		architecture "x86_64"
-
-	-- Win32 platform properties
-	filter "platforms:Win32"
-		system "Windows"
-		architecture "x86"
-
 
 
 

@@ -2,7 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>F:\dev\C++\proto-engine\Bin\Release\ProtoEngine.dll</FullPath>
+      <FullPath>F:\dev\C++\proto-engine\TestBin\Debug\ProtoEngine.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>F:\dev\C++\proto-engine\TestBin\Debug\TestGame.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
