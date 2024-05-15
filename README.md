@@ -1,2 +1,2 @@
 # ProtoEngine
-Windows software for simulating 2D physics
+Simple windows game engine.
