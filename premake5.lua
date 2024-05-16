@@ -1,6 +1,6 @@
 workspace "ProtoEngine"
 	-- Releases
-	configurations { "ReleaseAlone", "DebugAlone", "ReleaseWithGame", "DebugWithGame" }
+	configurations { "Release", "Debug" }
 	-- Platforms
 	platforms { "Win64" }
 
@@ -38,7 +38,7 @@ project "ProtoEngine"
 	}
 
 	-- Debug alone properties
-	filter "configurations:DebugAlone"
+	filter "configurations:Debug"
 		defines { "DEBUG" }
 		symbols "On"
 		targetdir "Bin/%{cfg.buildcfg}"
@@ -46,28 +46,12 @@ project "ProtoEngine"
 		runtime "Debug"
 
 	-- Release Alone properties
-	filter "configurations:ReleaseAlone"
+	filter "configurations:Release"
 		defines { "NDEBUG" }
 		optimize "On"
 		targetdir "Bin/%{cfg.buildcfg}"
 		objdir "Bin/Intermediates/%{cfg.buildcfg}"
 		runtime "Release"
-
-	-- Release With Game properties
-	filter "configurations:ReleaseWithGame"
-		defines { "NDEBUG" }
-		optimize "On"
-		targetdir "TestBin/Release"
-		objdir "TestBin/Intermediates/Release"
-		runtime "Release"
-	
-	-- Debug With Game properties
-	filter "configurations:DebugWithGame"
-		defines { "DEBUG" }
-		symbols "On"
-		targetdir "TestBin/Debug"
-		objdir "TestBin/Intermediates/Debug"
-		runtime "Debug"
 
 	-- Win64 platform properties
 	filter "platforms:Win64"
@@ -85,9 +69,9 @@ project "TestGame"
 
 	-- Source files	
 	files { 
-		"Test/*.cpp", 
-		"Test/*.h", 
-		"Test/*.hpp" 
+		"TestGame/*.cpp", 
+		"TestGame/*.h", 
+		"TestGame/*.hpp" 
 	}
 
 	links "ProtoEngine"
@@ -95,19 +79,19 @@ project "TestGame"
 	includedirs "Include"
 
 	-- Default debug release properties
-	filter "configurations:DebugWithGame"
+	filter "configurations:Debug"
 		-- Output directories
-		targetdir "TestBin/Debug"
-		objdir "TestBin/Intermediates/Debug"
+		targetdir "Bin/Debug"
+		objdir "Bin/Intermediates/Debug"
 		defines { "DEBUG" }
 		symbols "On"
 		runtime "Debug"
 
 	-- Release properties
-	filter "configurations:ReleaseWithGame"
+	filter "configurations:Release"
 		-- Output directories
-		targetdir "TestBin/Release"
-		objdir "TestBin/Intermediates/Release"
+		targetdir "Bin/Release"
+		objdir "Bin/Intermediates/Release"
 		defines { "NDEBUG" }
 		optimize "On"
 		runtime "Release"

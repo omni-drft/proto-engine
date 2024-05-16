@@ -9,11 +9,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\ProtoEngine.hpp">
-      <Filter>Include</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Source\ProtoEngine.cpp" />
+    <ClCompile Include="TestGame\Main.cpp" />
   </ItemGroup>
 </Project>
