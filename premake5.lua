@@ -57,6 +57,7 @@ project "ProtoEngine"
 	filter "platforms:Win64"
 		system "Windows"
 		architecture "x86_64"
+		defines "_WIN32"
 
 
 -- Project TestGame
@@ -100,6 +101,7 @@ project "TestGame"
 	filter "platforms:Win64"
 		system "Windows"
 		architecture "x86_64"
+		
 
 
 
