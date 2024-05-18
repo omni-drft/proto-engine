@@ -4,17 +4,19 @@ workspace "ProtoEngine"
 	-- Platforms
 	platforms { "Win64" }
 
--- Project ProtoEngine
-project "ProtoEngine"
-	kind "SharedLib"
+-- Project TestGame
+project "ProtoExe"
+	kind "ConsoleApp"
+
 	-- Language setup
 	language "C++"
 	cppdialect "C++17"
 
-
 	-- Source files	
 	files { 
 		"Source/*.cpp", 
+		"Source/*.h", 
+		"Source/*.hpp" 
 	}
 
 	-- Library directories
@@ -36,48 +38,6 @@ project "ProtoEngine"
 		"C:/VulkanSDK/1.3.280.0/Include",
 		"Include"
 	}
-
-	-- Debug alone properties
-	filter "configurations:Debug"
-		defines { "DEBUG" }
-		symbols "On"
-		targetdir "Bin/%{cfg.buildcfg}"
-		objdir "Bin/Intermediates/%{cfg.buildcfg}"
-		runtime "Debug"
-
-	-- Release Alone properties
-	filter "configurations:Release"
-		defines { "NDEBUG" }
-		optimize "On"
-		targetdir "Bin/%{cfg.buildcfg}"
-		objdir "Bin/Intermediates/%{cfg.buildcfg}"
-		runtime "Release"
-
-	-- Win64 platform properties
-	filter "platforms:Win64"
-		system "Windows"
-		architecture "x86_64"
-		defines "_WIN32"
-
-
--- Project TestGame
-project "TestGame"
-	kind "ConsoleApp"
-
-	-- Language setup
-	language "C++"
-	cppdialect "C++17"
-
-	-- Source files	
-	files { 
-		"TestGame/*.cpp", 
-		"TestGame/*.h", 
-		"TestGame/*.hpp" 
-	}
-
-	links "ProtoEngine"
-
-	includedirs "Include"
 
 	-- Default debug release properties
 	filter "configurations:Debug"
