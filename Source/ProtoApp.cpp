@@ -56,6 +56,18 @@ void ProtoApp::createInstance()
 		throw std::runtime_error("failed to create instance!");
 	else
 		std::cout << "Instance created succesfully!" << std::endl;
+
+	uint32_t extensionCount{};
+	vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
+	std::vector<VkExtensionProperties> extensions(extensionCount);
+	vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, extensions.data());
+
+	std::cout << "Available extensions:" << std::endl;
+
+	for (const auto& extension : extensions) {
+		std::cout << "    " << extension.extensionName << std::endl;
+	}
+
 }
 
 
