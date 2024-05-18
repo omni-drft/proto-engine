@@ -3,7 +3,7 @@
 int main()
 {
 	ProtoApp* App{ new ProtoApp("Test", 800, 600) };
-	App->loop();
+	App->run();
 	delete App;
 	return 0;
 }
