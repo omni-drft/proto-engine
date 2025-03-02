@@ -418,4 +418,6 @@ FodyWeavers.xsd
 *.vcxproj.filters
 *.vcxproj.user
 
+Build/
+
 
