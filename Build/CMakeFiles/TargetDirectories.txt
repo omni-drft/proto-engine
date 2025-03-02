@@ -1,6 +1,0 @@
-D:/dev/C++/proto-engine/Build/CMakeFiles/ProtoEngine.dir
-D:/dev/C++/proto-engine/Build/CMakeFiles/ALL_BUILD.dir
-D:/dev/C++/proto-engine/Build/CMakeFiles/ZERO_CHECK.dir
-D:/dev/C++/proto-engine/Build/Vendor/glfw/CMakeFiles/ALL_BUILD.dir
-D:/dev/C++/proto-engine/Build/Vendor/glfw/src/CMakeFiles/glfw.dir
-D:/dev/C++/proto-engine/Build/Vendor/glfw/src/CMakeFiles/update_mappings.dir
