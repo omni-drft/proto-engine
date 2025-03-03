@@ -419,5 +419,8 @@ FodyWeavers.xsd
 *.vcxproj.user
 
 Build/
+bin/
+obj/
+
 
 
