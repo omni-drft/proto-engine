@@ -10,6 +10,8 @@ class ENGINE_API Window {
  public:
   Window(uint16_t width, uint16_t height);
   void Init();
+  void PollEvents();
+  bool ShouldClose();
   void Close();
   ~Window();
 

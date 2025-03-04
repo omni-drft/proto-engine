@@ -24,6 +24,7 @@ ProtoEngine::Window::Window(uint16_t width, uint16_t height)
     : width_(width), height_(height), resizable_(true), window_(new GLFWWindowHandle()) {}
 
 void ProtoEngine::Window::Init() {
+  glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
   if (!glfwInit()) {
     throw std::runtime_error("Failed to initialise GLFW!");
   }
@@ -43,16 +44,18 @@ void ProtoEngine::Window::Init() {
 
   glm::vec4 vec;
   glm::mat4 matrix;
-  auto test{matrix * vec};
-  
-  while (!glfwWindowShouldClose(window_->window)) {
-    glfwPollEvents();
-  }
+  auto test{matrix * vec}; 
+}
 
+void ProtoEngine::Window::PollEvents() { glfwPollEvents(); }
+
+bool ProtoEngine::Window::ShouldClose() {
+  return glfwWindowShouldClose(window_->window) ? true : false;
+}
+
+void ProtoEngine::Window::Close() {
   glfwDestroyWindow(window_->window);
   glfwTerminate();
 }
-
-void ProtoEngine::Window::Close() {}
 
 ProtoEngine::Window::~Window() { delete window_; }
