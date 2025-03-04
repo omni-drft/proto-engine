@@ -13,6 +13,7 @@ workspace "ProtoEngine"
     project "Engine"
         kind "SharedLib"
         language "C++"
+        cppdialect "C++17"
         targetdir "bin/%{cfg.buildcfg}"
         architecture "x86_64"
         defines {"ENGINE_EXPORTS"}
@@ -21,14 +22,15 @@ workspace "ProtoEngine"
             "source/**.h",
             "include/**.h"
         }
-        libdirs {
-            "vendor/glfw",
-            os.getenv("VULKAN_SDK") .. "/Lib"
-        }
         includedirs {
             "vendor/glfw/include",
             "include",
+            "vendor/glm",
             os.getenv("VULKAN_SDK") .. "/Include"
+        }
+        libdirs {
+            "vendor/glfw",
+            os.getenv("VULKAN_SDK") .. "/Lib"
         }
         prebuildcommands {
             'cmake -S vendor/glfw -B vendor/glfw/build -DCMAKE_BUILD_TYPE=%{cfg.buildcfg} -DGLFW_BUILD_EXAMPLES=OFF -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF',
@@ -46,6 +48,7 @@ workspace "ProtoEngine"
     project "Sandbox"
         kind "ConsoleApp"
         language "C++"
+        cppdialect "C++17"
         targetdir "bin/%{cfg.buildcfg}"
         architecture "x86_64"
         files { 
