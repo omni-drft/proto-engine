@@ -2,7 +2,7 @@
 #include "window.h"
 
 int main() {
-  ProtoEngine::Window window(400, 200);
+  ProtoEngine::Window window(800, 600);
   window.Init();
   while (!window.ShouldClose()) {
     window.PollEvents();

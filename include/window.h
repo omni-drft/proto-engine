@@ -13,13 +13,20 @@ class ENGINE_API Window {
   void PollEvents();
   bool ShouldClose();
   void Close();
+
+  void DrawTriangle();
+
   ~Window();
 
  private:
   uint16_t width_, height_;
   bool resizable_;
+  
   struct GLFWWindowHandle;
   GLFWWindowHandle* window_;
+  
+  struct VkInstanceHandle;
+  VkInstanceHandle* vulkan_instance_;
 };
 
 }  // namespace ProtoEngine
